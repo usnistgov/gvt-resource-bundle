@@ -1,0 +1,12 @@
+	{
+  "version" : "1.0.0-beta",
+  "name" : "HL7 v2 General Validation Tool",
+  "domain" : "",
+  "adminEmail" : "robert.snelick@nist.gov",
+  "description" : "No Description",
+  "header" : "",
+  "homeTitle" : "Welcome to the NIST HL7 v2 General Validation Tool ",
+  "homeContent" : "",
+  "rsbVersion" : "${project.version}-${ts}"
+  
+}
