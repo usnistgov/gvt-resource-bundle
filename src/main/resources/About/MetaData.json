@@ -2,7 +2,6 @@
   "version" : "1.0.0-beta",
   "name" : "GVT",
   "domain" : "NIST HL7 V2 General Validation Tool",
-  "adminEmail" : ["robert.snelick@nist.gov","nicolas.crouzier@nist.gov", "crouzier@nist.gov", "harold.affo@nist.gov"],
   "description" : "No Description",
   "header" : "",
   "homeTitle" : "Welcome to the NIST HL7 v2 General Validation Tool ",
