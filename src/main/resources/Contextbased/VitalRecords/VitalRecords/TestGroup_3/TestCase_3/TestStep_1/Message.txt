@@ -1,0 +1,15 @@
+MSH|^~\&|DRrcv^2.16.840.1.113883.3.20091^ISO|NCHS^2.16.840.1.113883.3.8989^ISO|CauseDeathProcessing^2.16.840.1.113883.3.20091^ISO|VRDept^2.16.840.1.113883.3.20091^ISO|20030122191200||ADT^A04^ADT_A01|1223334505|P|2.6|||NE|NE|US||||CCODA04_V1.0^PHIN VS
+EVN||20101102133312
+PID|1||900213^^^&2.16.840.1.113883.4.1&ISO^DC~2003000213^^^&2.16.840.1.113883.4.1&ISO^DCFN||Wright^Vivienne^^^^^L||||||||||||||||||||||||200301222100-0500|Y
+PV1||N
+OBX|1|CWE|80356-9^Cause of death entity axis code [Automated]^LN|1|I469^Cardiopulmonary arrest^I10C||||||F
+OBX|2|NM|PHC1428^Part\Line Number^CDCPHINVS|1|1||||||F
+OBX|3|NM|PHC1427^Sequence within Line^CDCPHINVS|1|1||||||F
+OBX|4|CWE|80356-9^Cause of death entity axis code [Automated]^LN|2|O149^Eclampsia^I10C||||||F
+OBX|5|NM|PHC1428^Part\Line Number^CDCPHINVS|2|2||||||F
+OBX|6|NM|PHC1427^Sequence within Line^CDCPHINVS|2|1||||||F
+OBX|7|CWE|69442-2^Timing of Recent Pregnancy Related to Death^LN||PHC1261^Pregnant at the time of death^CDCPHINVS||||||F
+OBX|8|CWE|80357-7^Cause of death record axis code [Automated]^LN|1|I469^Cardiopulmonary arrest^I10C||||||F
+OBX|9|CWE|80357-7^Cause of death record axis code [Automated]^LN|2|O149^Eclampsia^I10C||||||F
+OBX|10|CWE|80358-5^Cause of death.underlying [Automated]^LN||O149^Eclampsia^I10C||||||F
+OBX|11|CWE|PHC1429^Pregnancy edit flag^CDCPHINVS||PHC1381^Edit Passed^CDCPHINVS||||||F

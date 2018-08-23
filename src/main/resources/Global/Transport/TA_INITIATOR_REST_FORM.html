@@ -1,0 +1,33 @@
+<div class='form-group control-group' ng-class="{'has-success
+	has-feedback':
+	taInitiatorForm_erx_rest.usernameInput.$valid, 'base-has-error
+	has-feedback':taInitiatorForm_erx_rest.usernameInput.$invalid}">
+	<label for='usernameInput' class='col-md-2 control-label'>Username</label>
+	<div class='controls col-md-6'>
+		<input type='text' class='form-control' ng-model='config.username'
+			   name='usernameInput' id='usernameInput'>
+	</div>
+</div>
+<div class='form-group control-group' ng-class="{'has-success
+	has-feedback':
+	taInitiatorForm_erx_rest.passwordInput.$valid, 'base-has-error
+	has-feedback':taInitiatorForm_erx_rest.passwordInput.$invalid}">
+	<label for='passwordInput' class='col-md-2 control-label'>Password</label>
+	<div class='controls col-md-6'>
+		<input type='text' class='form-control' name='passwordInput'
+			   id='passwordInput' ng-model='config.password'>
+	</div>
+</div>
+<div class='form-group control-group' ng-class="{'has-success
+	has-feedback':
+	taInitiatorForm_erx_rest.endpointInput.$valid, 'base-has-error
+	has-feedback':taInitiatorForm_erx_rest.endpointInput.$invalid}">
+	<label for='endpointInput' class='col-md-2 control-label'>Endpoint</label>
+	<div class='controls col-md-6'>
+		<input name='endpointInput' id='endpointInput' type='url'
+			   class='form-control' ng-model='config.endpoint' required>
+		<p ng-show='taInitiatorForm_erx_rest.endpointInput.$invalid && !taInitiatorForm_erx_rest.endpointInput.$pristine'
+		   class='help-block'>Invalid url. Expected format is
+			{{appInfo.url}}</p>
+	</div>
+</div>

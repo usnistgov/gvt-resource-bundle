@@ -10,6 +10,17 @@
 			"name": "NIST Home",
 			"homeTitle": "Welcome to the GVT",
 			"authorUsername":"nico"
+ 		},
+ 		{
+			"key": "VitalRecords",
+			"position": 2,
+			"rsbVersion"	:"${project.version}-${ts}",
+	    		"version"		: "Version 1.0.0",
+	    		"igVersion"		:"2016041",
+	    		"scope": "GLOBAL",
+			"name": "CDC Vital Records CDA Test Tool",
+			"homeTitle": "Welcome to the NIST/CDC Vital Records CDA Validation Suite",
+			"authorUsername":"nico"
  		}
  	
 	]

@@ -1,0 +1,4741 @@
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title></title><style type="text/css">
+                     @media screen {
+					.message-content legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.message-content .nav-tabs {font-weight:bold;}					
+					.message-content fieldset {text-align:center;}
+                    .message-content maskByMediaType {display:table;}
+					.message-content table tbody tr th {font-size:95%}
+					.message-content table tbody tr td {font-size:100%;}
+					.message-content table tbody tr th {text-align:left;background:#436BEC}
+					.message-content table thead tr th {text-align:center;}
+					.message-content table thead tr th:first-child {width:15%;}
+					.message-content table thead tr th:nth-child(2) {width:30%;}
+					.message-content table thead tr th:nth-child(3) {width:30%;}
+					.message-content table thead tr th:last-child {width:20%;}
+					.message-content table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}
+					.message-content table  tr { border: 3px groove; }
+					.message-content table  th { border: 2px groove;}
+					.message-content table  td { border: 2px groove; }
+					.message-content table thead {border: 1px groove;background:#436BEC;text-align:left;}
+					.message-content table tbody tr td {text-align:left}
+					.message-content  .Field  { font: bold; background-color: rgb(198, 222, 255); }
+					.message-content  td.Component {padding-left:15px;}
+					.message-content  td.SubComponent {padding-left:25px;}
+					.message-content  td.Field + td.noData {background:rgb(198, 222, 255);}
+					.message-content  td.noData {background:#B8B8B8;}
+					.message-content .accordion-heading { font-weight:bold; font-size:90%; }	
+					.message-content .accordion-heading i.fa:after { content: "\00a0 "; }									
+					.message-content  panel { margin: 10px 5px 5px 5px; }
+                    }
+                    @media print {
+					.message-content legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.message-content .nav-tabs {font-weight:bold;}					
+					.message-content  {text-align:center;page-break-inside: avoid;}
+                    .message-content maskByMediaType {display:table;}
+                    .message-content  table tbody tr th {font-size:80%}
+                    .message-content  table tbody tr td {font-size:70%;}
+                    .message-content  table tbody tr th {text-align:left;background:#436BEC}
+                    .message-content  table thead tr th {text-align:center;font-size:80%;}
+                    .message-content  legend {text-align:center;font-size:70%;}
+                    .message-content  table thead tr th:first-child {width:15%;}
+                    .message-content  table thead tr th:nth-child(2) {width:30%;}
+                    .message-content  table thead tr th:nth-child(3) {width:30%;}
+                    .message-content  table thead tr th:last-child {width:20%;}
+					.message-content  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .message-content  table  tr { border: 3px groove; }
+                    .message-content  table  th { border: 2px groove;}
+                    .message-content  table  td { border: 2px groove; }
+                    .message-content  table thead {border: 1px groove;background:#436BEC;text-align:left;}
+                    .message-content  table tbody tr td {text-align:left}
+					.message-content  .Field  { font: bold; background-color: rgb(198, 222, 255); }
+                    .message-content  .Component {padding-left:10px;}
+                    .message-content  .SubComponent {padding-left:20px;}
+                    .message-content td.noData {background:#B8B8B8;}
+					.message-content  td.noData {background:rgb(198, 222, 255);;}
+					.message-content .accordion-heading { font-weight:bold;  font-size:90%; }										
+					.message-content .accordion-heading i.fa:after { content: "\00a0 "; }									
+					.message-content  panel { margin: 10px 5px 5px 5px; }
+                    }
+                    @page {
+                    counter-increment: page;
+					@bottom-center {
+                    content: "Page " counter(page);
+                    }
+                    }
+                    @page :left {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+                    @page :right {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+		</style></head>
+   <body>
+      <div class="message-content">
+<fieldset>
+<legend>MSH : Message Header</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">MSH-1
+		</td>
+		<td class="Field">Field Separator
+		</td>
+		<td class="Field">|
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-2
+		</td>
+		<td class="Field">Encoding Characters
+		</td>
+		<td class="Field">^~\&amp;
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-3
+		</td>
+		<td class="Field">Sending Application
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-3.1
+					</td>
+					<td class="Component">Namespace ID
+					</td>
+					<td class="Data">DRrcv
+					</td>
+					<td class="Data">Presence-Configuration
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-3.2
+					</td>
+					<td class="Component">Universal ID
+					</td>
+					<td class="Data">2.16.840.1.113883.3.20091
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-3.3
+					</td>
+					<td class="Component">Universal ID Type
+					</td>
+					<td class="Data">ISO
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-4
+		</td>
+		<td class="Field">Sending Facility
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-4.1
+					</td>
+					<td class="Component">Namespace ID
+					</td>
+					<td class="Data">NCHS
+					</td>
+					<td class="Data">Presence-Configuration
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-4.2
+					</td>
+					<td class="Component">Universal ID
+					</td>
+					<td class="Data">2.16.840.1.113883.3.8989
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-4.3
+					</td>
+					<td class="Component">Universal ID Type
+					</td>
+					<td class="Data">ISO
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-5
+		</td>
+		<td class="Field">Receiving Application
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-5.1
+					</td>
+					<td class="Component">Namespace ID
+					</td>
+					<td class="Data">CauseOfDeathProcessing
+					</td>
+					<td class="Data">Presence-Configuration
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-5.2
+					</td>
+					<td class="Component">Universal ID
+					</td>
+					<td class="Data">2.16.840.1.113883.3.20091
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-5.3
+					</td>
+					<td class="Component">Universal ID Type
+					</td>
+					<td class="Data">ISO
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-6
+		</td>
+		<td class="Field">Receiving Facility
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-6.1
+					</td>
+					<td class="Component">Namespace ID
+					</td>
+					<td class="Data">VRDept
+					</td>
+					<td class="Data">Presence-Configuration
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-6.2
+					</td>
+					<td class="Component">Universal ID
+					</td>
+					<td class="Data">2.16.840.1.113883.3.20091
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-6.3
+					</td>
+					<td class="Component">Universal ID Type
+					</td>
+					<td class="Data">ISO
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-7
+		</td>
+		<td class="Field">Date/Time of Message
+		</td>
+		<td class="Field">20151220111511-0400
+		</td>
+		<td class="Field">Presence-System Generated
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-9
+		</td>
+		<td class="Field">Message Type
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-9.1
+					</td>
+					<td class="Component">Message Code
+					</td>
+					<td class="Data">ADT
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-9.2
+					</td>
+					<td class="Component">Trigger Event
+					</td>
+					<td class="Data">A04
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-9.3
+					</td>
+					<td class="Component">Message Structure
+					</td>
+					<td class="Data">ADT_A01
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-10
+		</td>
+		<td class="Field">Message Control ID
+		</td>
+		<td class="Field">1223334505
+		</td>
+		<td class="Field">Presence Length-Configuration
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-11
+		</td>
+		<td class="Field">Processing ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-11.1
+					</td>
+					<td class="Component">Processing ID
+					</td>
+					<td class="Data">P
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-12
+		</td>
+		<td class="Field">Version ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-12.1
+					</td>
+					<td class="Component">Version ID
+					</td>
+					<td class="Data">2.6
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+		<tr>
+		<td class="Field">MSH-15
+		</td>
+		<td class="Field">Accept Acknowledgment Type
+		</td>
+		<td class="Field">AL
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-16
+		</td>
+		<td class="Field">Application Acknowledgment Type
+		</td>
+		<td class="Field">NE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-17
+		</td>
+		<td class="Field">Country Code
+		</td>
+		<td class="Field">US
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">MSH-21
+		</td>
+		<td class="Field">Message Profile Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">MSH-21.1
+					</td>
+					<td class="Component">Entity Identifier
+					</td>
+					<td class="Data">CCODA04_V1.0
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-21.2
+					</td>
+					<td class="Component">Namespace ID
+					</td>
+					<td class="Data">PHIN VS
+					</td>
+					<td class="Data">Presence-Configuration
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-21.3
+					</td>
+					<td class="Component">Universal ID
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">MSH-21.4
+					</td>
+					<td class="Component">Universal ID Type
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>EVN : Event Type</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">EVN-2
+		</td>
+		<td class="Field">Recorded Date/Time
+		</td>
+		<td class="Field">20101102133312
+		</td>
+		<td class="Field">Presence-System Generated
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>PID : Patient Identification</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">PID-1
+		</td>
+		<td class="Field">Set ID - PID
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">PID-3[1]
+		</td>
+		<td class="Field">Patient Identifier List
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">PID-3[1].1
+					</td>
+					<td class="Component">ID Number
+					</td>
+					<td class="Data">9000213
+					</td>
+					<td class="Data">Presence-Content Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">PID-3[1].4
+					</td>
+					<td class="Component">Assigning Authority
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+							<tr>
+							<td class="SubComponent">PID-3[1].4.2
+							</td>
+							<td class="SubComponent">Universal ID
+							</td>
+							<td class="Data">2.16.840.1.113886.4.1
+							</td>
+							<td class="Data">Indifferent
+							</td></tr>
+							<tr>
+							<td class="SubComponent">PID-3[1].4.3
+							</td>
+							<td class="SubComponent">Universal ID Type
+							</td>
+							<td class="Data">ISO
+							</td>
+							<td class="noData">
+							</td></tr>
+					<tr>
+					<td class="Component">PID-3[1].5
+					</td>
+					<td class="Component">Identifier Type Code
+					</td>
+					<td class="Data">DC
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+		<tr>
+		<td class="Field">PID-3[2]
+		</td>
+		<td class="Field">Patient Identifier List
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">PID-3[2].1
+					</td>
+					<td class="Component">ID Number
+					</td>
+					<td class="Data">2015000213
+					</td>
+					<td class="Data">Presence-Content Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">PID-3[2].4
+					</td>
+					<td class="Component">Assigning Authority
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+							<tr>
+							<td class="SubComponent">PID-3[2].4.2
+							</td>
+							<td class="SubComponent">Universal ID
+							</td>
+							<td class="Data">2.16.840.1.113883.888.12
+							</td>
+							<td class="Data">Indifferent
+							</td></tr>
+							<tr>
+							<td class="SubComponent">PID-3[2].4.3
+							</td>
+							<td class="SubComponent">Universal ID Type
+							</td>
+							<td class="Data">ISO
+							</td>
+							<td class="noData">
+							</td></tr>
+					<tr>
+					<td class="Component">PID-3[2].5
+					</td>
+					<td class="Component">Identifier Type Code
+					</td>
+					<td class="Data">DCFN
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+		<tr>
+		<td class="Field">PID-5
+		</td>
+		<td class="Field">Patient Name
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">PID-5.1
+					</td>
+					<td class="Component">Family Name
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+							<tr>
+							<td class="SubComponent">PID-5.1.1
+							</td>
+							<td class="SubComponent">Surname
+							</td>
+							<td class="Data">Perez
+							</td>
+							<td class="Data">Presence-Test Case Proper
+							</td></tr>
+					<tr>
+					<td class="Component">PID-5.2
+					</td>
+					<td class="Component">Given Name
+					</td>
+					<td class="Data">Javier
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">PID-5.3
+					</td>
+					<td class="Component">Second and Further Given Names or Initials Thereof
+					</td>
+					<td class="Data">Luis
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">PID-5.4
+					</td>
+					<td class="Component">Suffix (e.g., JR or III)
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">PID-5.7
+					</td>
+					<td class="Component">Name Type Code
+					</td>
+					<td class="Data">L
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">PID-29
+		</td>
+		<td class="Field">Patient Death Date and Time
+		</td>
+		<td class="Field">201510051125-0400
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">PID-30
+		</td>
+		<td class="Field">Patient Death Indicator
+		</td>
+		<td class="Field">Y
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>PV1 : Patient Visit</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">PV1-2
+		</td>
+		<td class="Field">Patient Class
+		</td>
+		<td class="Field">N
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX[*]</legend>
+<diV>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80356-9
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death entity axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">S099
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Unspecified injury of head
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1428
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Part\Line Number
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Presence-Test Case Proper
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1427
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Sequence within Line
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed List
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">4
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80356-9
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death entity axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">V890
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Person injured in unspecified motor-vehicle accident, nontraffic Motor-vehicle accident NOS, nontraffic
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">5
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1428
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Part\Line Number
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Presence-Test Case Proper
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">6
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1427
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Sequence within Line
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">7
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1423
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">E-code indicator
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">N
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">No
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">HL70533
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">8
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80356-9
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death entity axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">G409
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Epilepsy, unspecified
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">9
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1428
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Part\Line Number
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">10
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1427
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Sequence within Line
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">11
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80356-9
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death entity axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">4
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">I64
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Stroke, not specified as haemorrhage or infarction
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">12
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1428
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Part\Line Number
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">4
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">6
+		</td>
+		<td class="Field">Presence-Content Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">13
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">NM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1427
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Sequence within Line
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">4
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">14
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">69444-8
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Did death result from injury at work
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">N
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">No
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">HL70532
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">15
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">69443-0
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Tobacco
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">373067005
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">No
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">SCT
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">16
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">DTM
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">69445-5
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Injury date
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">201510040830-0400
+		</td>
+		<td class="Field">Presence-Test Case Proper
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">17
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">69449-7
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Manner of death
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">7878000
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Accident
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">SCT
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">18
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80357-7
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death record axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">1
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">S099
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Unspecified injury of head
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">19
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80357-7
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death record axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">2
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">G409
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Epilepsy, unspecified
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">20
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80357-7
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death record axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">3
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">I64
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Stroke, not specified as haemorrhage or infarction
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">21
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80357-7
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death record axis code [Automated]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">4
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">V890
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Person injured in unspecified motor-vehicle accident, nontraffic Motor-vehicle accident NOS, nontraffic
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">22
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">80359-3
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Cause of death.underlying [Manual]
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">S099
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Unspecified injury of head
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10C
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">23
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">11376-1
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Injury location
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">LN
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">4
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">Street/Highway
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">I10PO
+					</td>
+					<td class="Data">Value-Profile Fixed List
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+<fieldset>
+<legend>OBX : Observation/Result</legend>
+		<table>
+		<tr>
+		<th>Location</th>
+		<th>Data Element</th>
+		<th>Data</th>
+		<th>Categorization</th>
+		</tr>
+		<tr>
+		<td class="Field">OBX-1
+		</td>
+		<td class="Field">Set ID - OBX
+		</td>
+		<td class="Field">24
+		</td>
+		<td class="Field">Value-Test Case Fixed
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-2
+		</td>
+		<td class="Field">Value Type
+		</td>
+		<td class="Field">CWE
+		</td>
+		<td class="Field">Presence-Test Case Proper
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-3
+		</td>
+		<td class="Field">Observation Identifier
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-3.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1462
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">System Reject Code
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-3.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-4
+		</td>
+		<td class="Field">Observation Sub-ID
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">Indifferent
+		</td></tr>
+		<tr>
+		<td class="Field">OBX-5
+		</td>
+		<td class="Field">Observation Value
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-5.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="Data">PHC1383
+					</td>
+					<td class="Data">Value-Test Case Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="Data">ACME Reject
+					</td>
+					<td class="Data">Presence-Test Case Proper
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="Data">CDCPHINVS
+					</td>
+					<td class="Data">Value-Profile Fixed
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-6
+		</td>
+		<td class="Field">Units
+		</td>
+		<td class="Field">
+		</td>
+		<td class="Field">
+		</td></tr>
+					<tr>
+					<td class="Component">OBX-6.1
+					</td>
+					<td class="Component">Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.2
+					</td>
+					<td class="Component">Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.3
+					</td>
+					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-6.9
+					</td>
+					<td class="Component">Original Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="Data">Indifferent
+					</td></tr>
+		<tr>
+		<td class="Field">OBX-11
+		</td>
+		<td class="Field">Observation Result Status
+		</td>
+		<td class="Field">F
+		</td>
+		<td class="Field">Value-Profile Fixed
+		</td></tr>
+		</table>
+		<br/>
+</fieldset>
+</div>
+</fieldset></div>
+   </body>
+</html>

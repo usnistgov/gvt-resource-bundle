@@ -1,0 +1,11 @@
+{
+  "name": "Void Death Certificate Document",
+  "description": "Void Death Certificate Document",
+  "position": 5,
+  "version":"1",
+  "id":"12043",
+  "xml": {
+      "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
+      "schematronPathList": ["CDAR2_IG_EHR2VRDRPT_R1_D2_2017JAN_VOID.sch"]
+  }
+}

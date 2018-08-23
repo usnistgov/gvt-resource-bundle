@@ -1,0 +1,9 @@
+{ 
+"name" : "Vital Records Death Reporting",
+"description" : "The project started in 2015 with the development of a CDA-based document that captured reporting of death information from a clinical setting to vital records, based on the U.S. Standard Certificate of Death. In 2016, profiles were created in HL7 V2 messages to communicate those portions of the death record collected by clinicians that are appropriate for use by local, state, and territorial vital statistics agencies. The goal of these use cases is to transmit reliable and relevant clinical information to vital records. <BR><P>The use cases are: <UL><LI>Provider Supplied Death Information Messaging - The communication of death record information collected by clinicians in an Electronic Health Record Death Report from a provider's electronic health record (EHR) system to a jurisdictional vital records office.<LI>Jurisdiction Death Information Messaging - The communication of relevant death record information in a Jurisdiction Death Report from a jurisdictional vital records office to a national statistics agency. <LI>Coded Cause of Death Messaging - The communication of coded cause of death information in a Coded Cause of Death Report from the national statistics agency to a jurisdictional vital records office.<LI>Coded Race/Ethnicity Messaging - The communication of re-coded race and ethnicity information in a Coded Race & Ethnicity Report from the national statistics agency to a jurisdictional vital records office.<LI>Void Certificate Reporting Messaging - The communication of information regarding voided death certificates in a Jurisdiction Void Certificate Report from a jurisdictional vital records office to a national statistics agency.</UL>",
+   "domain": "VR",
+  "transport" : true,
+ "position":1,
+ "version":"1",
+"id":"15036"
+}

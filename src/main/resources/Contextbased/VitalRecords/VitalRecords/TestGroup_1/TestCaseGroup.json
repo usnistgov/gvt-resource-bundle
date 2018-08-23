@@ -1,0 +1,6 @@
+{
+	"name":"Provider Supplied Death Information Group",
+	"description":"This use case examines the ability to communicate death record information collected by clinicians in an Electronic Health Record Death Report from a provider's electronic health record (EHR) system to the Electronic Death Registration System (EDRS). Provider Death Registration Document: These clinical statements represent relevant death record information collected by clinicians appropriate for use by local, state, and territorial vital statistics agencies for reporting to vital records. This document type supports the Provider Supplied Death Information Messaging use case.",
+	"id":15000,
+	"position":1
+}
