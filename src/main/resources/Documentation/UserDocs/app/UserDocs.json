@@ -84,45 +84,51 @@
       "order":14
         },
         {
-            "title":"Context-Based Test Management: Connecting to GVT from TCAMT",
-            "name":"Context-Based Test Management Connecting to GVT from TCAMT.pptx",
-            "date":"2018/08/03",
+            "title":"Connecting and Pushing Test Plans to GVT from TCAMT",
+            "name":"Connecting and Pushing Test Plans to GVT from TCAMT.pptx",
+            "date":"2018/10/18",
       "order":15
+        },
+        {
+            "title":"Connecting and Pushing Test Cases to GVT from TCAMT (Video)",
+            "name":"Connecting and Pushing Test Cases to GVT from TCAMT.mp4",
+            "date":"2018/10/18",
+      	"order":16
         },
         {
             "title":"Connecting and Pushing Profiles to GVT from IGAMT",
             "name":"Connecting and Pushing Profiles to GVT from IGAMT.pptx",
             "date":"2018/08/03",
-      "order":16
+      "order":17
         },
         {
             "title":"Connecting and Pushing Profiles to GVT from IGAMT (Video)",
             "name":"Connecting and Pushing Profiles to GVT from IGAMT.mp4",
-            "date":"2018/09/12",
-      "order":17
+            "date":"2018/11/08",
+      "order":18
         },
         {
             "title":"GVT Profile Verification",
             "name":"GVT Profile Verification.pptx",
             "date":"2018/08/03",
-      "order":18
+      "order":19
         },
         {
             "title":"Context-Free Test Execution",
             "name":"Context-Free Test Execution.pptx",
             "date":"2018/08/03",
-      "order":19
+      "order":20
         },
         {
             "title":"Context-Based Test Execution",
             "name":"Context-Based Test Execution.pptx",
             "date":"2018/08/03",
-      "order":20
+      "order":21
         },
         {
             "title":"Context-Free and Context-Based Test Tool Utilities",
             "name":"Context-Free and Context-Based Test Tool Utilities.pptx",
             "date":"2018/08/03",
-      "order":21
+      "order":22
         }
 ]
