@@ -1,0 +1,6 @@
+{
+   "name":"Coded Cause of Death Messaging Information Group",
+   "description":"This use case examines the ability of the communication of coded cause of death information in a Coded Cause of Death Report from the national statistics agency  to the National Center for Health Statistics (NCHS). Coded Cause of Death Document: These clinical statements represent information that includes the set of codes that represent the provider supplied death information text phrases. This document type supports the Coded Cause of Death Messaging use case, providing reliable, non-duplicated delivery of coded cause of death information for reporting to vital records.",
+   "id":15020,
+   "position":3
+}

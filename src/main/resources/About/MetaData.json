@@ -10,6 +10,17 @@
 			"name": "NIST Home",
 			"homeTitle": "Welcome to the NIST General Validation Tool",
 			"authorUsername":"nico"
+ 		},
+ 		{
+			"key": "xmltest",
+			"position": 2,
+			"rsbVersion"	:"${project.version}-${ts}",
+	    		"version"		: "${metadata.version}",
+	    		"igVersion"		:"",
+	    		"scope": "GLOBAL",
+			"name": "XML Test",
+			"homeTitle": "XML testing",
+			"authorUsername":"nico"
  		}
  	
 	]

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Title:              Provider Death Registration Document
+    Specification:      Vital Records Death Reporting US Realm - Release 2
+    
+    Revision History:   
+        Created:    2015                Mead Walker     STU Release 1
+        Revised:    November 2016       Sarah Gaunt     Ballot of STU Release 2 
+        Revised:    April 2018          NIST            Changed some test data to match our context-based validation samples        
+-->
+<!--
+    Disclaimer: 
+    This sample file is informative only.
+    This sample file contains representative data elements from the eICR IG. 
+    The file depicts a fictional character's health data. Any resemblance to a real person is coincidental.
+    To illustrate as many data elements as possible, the clinical scenario may not be entirely plausible. 
+    The data in this sample file is not intended to represent a real patients, people or clinical events. 
+    This sample is designed to be used in conjunction with the eICR IG.
+     
+    Where guidance has been given to the conformance or cardinality of elements or
+    attributes and there is a discrepancy with the IG, the IG is always the normative
+    source of truth.
+    
+    Please note:  This sample is valid against the Schema and Schematron for ERRORS (not warnings). 
+    Logical schematron WARNINGS will generate from the sample file. 
+    It is logical to generate a samples file from a system with valid warnings.
+-->
+<!-- 
+  Templates are identified in comments above their template id.  
+  The IG in which the template version was first published is identified in square brackets before the template name.
+  
+  e.g.: [C-CDA 2.1] Continuity of Care (CCD) (V3)       indicates that the Discharge Summary (V3) template was first published in IG C-CDA R2.1
+        [C-CDA R2.0] Plan of Treatment Section (V2)     indicates that the Plan of Treatment Section (V2) template was first published in IG C-CDA R2.0
+        [C-CDA R1.1] History of Present Illness Section indicates that the Hospital Course Section was first published in IG C-CDA R1.1
+        
+  Even though all 3 templates above are included in IG C-CDA 2.1, because there have been no new versions of 
+  the History of Present Illness Section template in IGs later than C-CDA R1.1, it is considered to be published in R1.1. 
+  Similarly, there have been no new versions of the Plan of Treatment Section template later than C-CDA R.2 so it 
+  is considered to be published in R2.0.
+-->
+<?xml-stylesheet type="text/xsl" href="../../transform/cda.xsl"?>
+<ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3"
+    xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../../schema/infrastructure/cda/CDA_SDTC.xsd">
+    <realmCode code="US" />
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+
+    <!-- [VRDR STU2] U.S. Standard Certificate of Death (V2) -->
+    <templateId root="2.16.840.1.113883.10.20.26.1" extension="2016-12-01" />
+    <!-- [VRDR STU2] Provider Death Registration Document -->
+    <templateId root="2.16.840.1.113883.10.20.26.1.1.1" extension="2016-12-01" />
+
+    <!-- Provide an OID that identifies the namespace for the identifier. -->
+    <id root="1.1" extension="1052464931" />
+
+    <code code="69409-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="U.S. standard certificate of death - 2003 revision" />
+    <title>Provider Death Registration Document</title>
+
+    <effectiveTime value="20161107094421-0500" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.11.3883.5.25" codeSystemName="Confidentiality" displayName="Normal" />
+    <languageCode code="en-us" />
+    <recordTarget>
+        <patientRole>
+            <!-- Provide an OID that identifies the namespace for the identifier, in this case, SSN. 
+                 If SSN cannot be included, one of the following null flavor values should be used: 
+                 "NA" should be used when there is no SSN, as in non-US citizens, and newborns.
+                 "UNK" should be used when the SSN is unknown and the informant cannot provide it, 
+                       as in reporting the death of an unidentified person.
+                 "OTH" should be used when a social security number was provided and 
+                       later determined to be not valid
+            -->
+            <!-- US Social Security Number -->
+            <id root="2.16.840.1.113883.4.1" extension="987574661" />
+            <addr use="WP">
+                <streetAddressLine>143 Taylor Street</streetAddressLine>
+                <city>Annapolis</city>
+                <state>MD</state>
+                <county>Anne Arendel</county>
+                <postalCode>21401</postalCode>
+                <country>US</country>
+                <!-- Inside city limits? (set to either "Inside city limits" or "Outside city limits" -->
+                <additionalLocator>Inside city limits</additionalLocator>
+            </addr>
+            <patient classCode="PSN" determinerCode="INSTANCE">
+                <!-- Decedent's Legal Name(First, Middle, Last)
+                     Use nullFlavor="UNK" if unknown -->
+                <name use="L">
+                    <family>Perez</family>
+                    <given>Javier</given>
+                    <given>Luis</given>
+                </name>
+                <!-- AKA (also known as) is another name the decedent used or was known as. 
+                    It should be listed if it is substantially different from the decedent’s 
+                    legal name (e.g., Samuel Langhorne Clemens AKA Mark Twain, but not 
+                    Jonathon Doe AKA John Doe). 
+                -->
+                <!-- Sex -->
+                <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGenderCode" displayName="Male" />
+                <!-- Date of Birth -->
+                <birthTime value="19510401" />
+                <!-- Patient Death Indicator -->
+                <sdtc:deceasedInd value="true" />
+                <!-- 
+                     Actual or presumed Date/Time of death
+                     sdtc:deceasedTime SHALL be precise to the year
+                     The @probability attribute represents the probability assigned to the value, 
+                     a decimal number between 0 (very uncertain) and 1 (certain).
+                     If the date of death is the actual date of death, set @probability=1. 
+                     If the date of death is a presumed date of death, set @probability=0.
+                -->
+                <sdtc:deceasedTime xsi:type="UVP_TS" value="20101005112500-0400" probability="1" />
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author typeCode="AUT">
+        <time value="20161201100000" />
+        <assignedAuthor classCode="ASSIGNED">
+            <id root="1.1" extension="126134972" />
+            <!-- Provide an OID that identifies the namespace for the identifier. -->
+            <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                <name>
+                    <family>Doe</family>
+                    <given>John</given>
+                    <given>M.</given>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="1.1" extension="1288898110" />
+                <!-- Provide an OID that identifies the namespace for the identifier. -->
+                <name>Acme Organization</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+
+    <component>
+        <structuredBody>
+            <!-- 
+                ********************************************************
+                Death Event Section
+                ********************************************************
+            -->
+            <component>
+                <section>
+                    <!-- [VRDR STU2] Death Event Section  -->
+                    <templateId root="2.16.840.1.113883.10.20.26.1.2.6" extension="2016-12-01" />
+                    <code code="TEMP_LOINC_DEATH_EVENT_SECTION" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Death Event Section" />
+                    <title>Death Event Section</title>
+                    <text xmlns:voc="http://www.lantanagroup.com/voc">
+                        Section level information is left as an exercise to the reader
+                    </text>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU1] Death Location Type -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.8" />
+                            <code code="58332-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Location of Death" />
+                            <value xsi:type="CD" code="440041000124106" displayName="Death in hospital-based emergency department"
+                                codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU1] Location of Death  -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.10" />
+                            <code code="58332-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Location of Death" />
+                            <value use="HP" xsi:type="AD">
+                                <streetAddressLine>104 MAIN STREET</streetAddressLine>
+                                <city>SALT LAKE CITY</city>
+                                <state>UT</state>
+                                <postalCode>84111</postalCode>
+                            </value>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU1] Manner of Death -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.11" />
+                            <code code="69449-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Manner of Death" />
+                            <value xsi:type="CD" code="7878000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Accident"
+                             />
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU2] Death Date Comment -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.3.20" extension="2016-12-01" />
+                            <code code="69454-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Death date comment" />
+                            <value xsi:type="ED">Court determined time of death</value>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+            <!-- 
+                ********************************************************
+                Death Administration Section
+                ********************************************************
+            -->
+            <component>
+                <section>
+                    <!-- [VRDR STU2] Death Administration Section  -->
+                    <templateId root="2.16.840.1.113883.10.20.26.1.2.3" extension="2016-12-01" />
+                    <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of procedures" />
+                    <title>Death Administration Section</title>
+                    <text xmlns:voc="http://www.lantanagroup.com/voc">
+                        Section level information is left as an exercise to the reader
+                    </text>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <!-- [C-CDA R2.1] Procedure Activity Act  -->
+                            <templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09" />
+                            <!-- [VRDR STU2] Death Pronouncement (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.15" extension="2016-12-01" />
+                            <id root="48cc5e26-8548-41de-bee4-5b7b1c8339fd" />
+                            <code code="446661000124101" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Death pronouncement" />
+                            <statusCode code="completed" />
+                            <!-- Date/time pronounced dead -->
+                            <effectiveTime value="20161201100000" />
+                            <performer typeCode="PRF">
+                                <assignedEntity classCode="ASSIGNED">
+                                    <!-- One or more identifiers for the pronouncing clinician. 
+                                         The state license number is required. Provider NPI may be added as well. -->
+                                    <id root="1.1.2" extension="1234567" />
+                                    <addr use="WP">
+                                        <streetAddressLine>104 SECONDARY STREET</streetAddressLine>
+                                        <city>SALT LAKE CITY</city>
+                                        <state>UT</state>
+                                        <postalCode>84111</postalCode>
+                                    </addr>
+                                    <!-- Telecom is a required C-CDA Procedure Activity Act (V2) element,
+                                         use nullFlavor if telecom not available -->
+                                    <telecom nullFlavor="NA" />
+                                    <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                                        <name>
+                                            <family>Buck</family>
+                                            <given>Jane</given>
+                                            <given>F.</given>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        </act>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <!-- Set @negationInd to false to indicate that an autopsy took place -->
+                        <procedure classCode="PROC" moodCode="EVN" negationInd="true">
+                            <!-- [C-CDA R2.0] Procedure Activity Procedure (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+                            <!-- [VRDR STU2] Autopsy Details (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.2" extension="2016-12-01" />
+                            <id root="01346c67-3f7a-42bb-8cc6-9c8bfbbb3ea7" />
+                            <code code="29240004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="LOINC" displayName="Autopsy Procedure" />
+                            <!-- If an autopsy is performed, this field is valued with the date and time 
+                                 the autopsy was begun and completed. If both the start and end date/time 
+                                 are known, use effectiveTime/low and effectiveTime/high. 
+                                 Note, normally only the completion date and time will be provided, 
+                                 in this case, use effectiveTime/@value. 
+                            -->
+                            <statusCode code="completed" />
+                            <effectiveTime>
+                                <low value="20161202100000" />
+                                <high value="20161202140000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <!-- Autopsy performed by -->
+                                <assignedEntity classCode="ASSIGNED">
+                                    <!-- If the license number for the autopsy performer is not available
+                                         because the person was not licensed, 
+                                         nullFlavor="NA" should be used in place of the identifier. -->
+                                    <id root="1.1" extension="1234567" />
+                                    <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                                        <name>
+                                            <family>Roe</family>
+                                            <given>Ralph</given>
+                                            <given>T.</given>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                            <entryRelationship typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Availability of Autopsy Results (V2) -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3" extension="2016-12-01" />
+                                    <code code="69436-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Autopsy results available" />
+                                    <!-- Were autopsy findings available to complete the cause of death? -->
+                                    <value xsi:type="BL" value="true" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Autopsy Report -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.19" extension="2016-12-01" />
+                                    <code code="18743-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Autopsy report" />
+                                    <!-- Autopsy report -->
+                                    <value xsi:type="ED" mediaType="text/plain">A text string with the autopsy report content.</value>
+                                </observation>
+                            </entryRelationship>
+                        </procedure>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <!-- [C-CDA R2.1] Procedure Activity Act  -->
+                            <templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09" />
+                            <!-- [VRDR STU2] Death ation (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.7" extension="2016-12-01" />
+                            <id root="b3174e3e-47bc-4c1a-a732-bc0a565f2c8c" />
+                            <code code="308646001" displayName="Death Certification" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                            <statusCode code="completed" />
+                            <!-- Provide the date and time at which the death certificate was signed. 
+                                 A value is required if the case has not been assigned to a coroner/medical examiner. -->
+                            <!-- Date certified -->
+                            <effectiveTime value="20161201100000" />
+                            <performer typeCode="PRF">
+                                <assignedEntity classCode="ASSIGNED">
+                                    <!-- One or more identifiers for the certifying clinician. 
+                                         The state license number is required. 
+                                         Provider NPI may be added as well. -->
+                                    <id root="1.1" extension="1234567" />
+                                    <code code="440051000124108" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                        displayName="Medical Examiner" />
+                                    <!-- The postal address used to locate the clinician or coroner at the 
+                                         time of death certification. The element is required if the 
+                                         death has been certified -->
+                                    <!-- Certifier address -->
+                                    <addr use="WP">
+                                        <streetAddressLine>104 MAIN STREET</streetAddressLine>
+                                        <city>SALT LAKE CITY</city>
+                                        <state>UT</state>
+                                        <postalCode>84111</postalCode>
+                                    </addr>
+                                    <!-- Telecom is a required C-CDA Procedure Activity Act (V2) element,
+                                         use nullFlavor if telecom not available -->
+                                    <telecom nullFlavor="NA" />
+                                    <!-- This field is valued with the person who signed the death certificate. 
+                                         The full name of the certifier is required. A value is required 
+                                         if the case has not been assigned to a coroner/medical examiner. -->
+                                    <!-- Certifier name -->
+                                    <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+                                        <name>
+                                            <family>Doe</family>
+                                            <given>John</given>
+                                            <given>M.</given>
+                                            <suffix>Sr.</suffix>
+                                            <!-- This element is to be used for entering the title of the 
+                                                 certifier as free text -->
+                                            <!-- Certifier title -->
+                                            <suffix qualifier="AC">MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                </assignedEntity>
+                            </performer>
+                        </act>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <!-- If the medical examiner or coroner was contacted, set @negationInd="false", 
+                             if the medical examiner or coroner was not contacted, set @negationInd="true" and 
+                             if it is unknown whether or not the medical examiner or coroner was contacted, 
+                             set @nullFlavor="UNK". -->
+                        <!-- negationInd="false" - the medical examiner or coroner was contacted -->
+                        <act classCode="ACT" moodCode="EVN" negationInd="false">
+                            <!-- [VRDR STU2] Coroner Case Transfer (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.4" extension="2016-12-01" />
+                            <!-- The coroner case identifier may be provided, if the case has been 
+                                 transferred to the coroner or medical examiner. -->
+                            <!-- The identifier assigned to a case of death by the coroner or medical examiner. -->
+                            <id root="1.1" extension="1111111" />
+                            <code code="74497-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                displayName="Medical examiner or coroner was contacted" />
+                            <entryRelationship typeCode="COMP">
+                                <!-- [VRDR STU1] Coroner Referral -->
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.5" />
+                                    <code code="69438-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Referral note forensic medicine" />
+                                    <!-- A note that is intended to record the reason the case was 
+                                         forwarded to a coroner or medical examiner. -->
+                                    <value xsi:type="ED">Suspicious death</value>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <!-- 
+                ********************************************************
+                Cause of Death Section
+                ********************************************************
+            -->
+            <component>
+                <section>
+                    <!-- [VRDR STU2] Section  -->
+                    <templateId root="2.16.840.1.113883.10.20.26.1.2.4" extension="2016-12-01" />
+                    <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List" />
+                    <title>Cause of Death Section</title>
+                    <text xmlns:voc="http://www.lantanagroup.com/voc">
+                        Section level information is left as an exercise to the reader
+                    </text>
+                    <entry typeCode="DRIV">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <!-- [VRDR STU2] Death Causal Information Organizer (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.6" extension="2016-12-01" />
+                            <statusCode code="completed" />
+                            <!-- Note, at least one component containing death cause information is required -->
+                            <component typeCode="COMP">
+                                <!-- Cause of death: line number (Part I) -->
+                                <sequenceNumber value="1" />
+                                <seperatableInd value="false" />
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Cause of Death (descriptive text) -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.16" extension="2016-12-01" />
+                                    <code code="69543-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Cause Of Death (US Standard Certificate of Death)" />
+                                    <!-- Descriptive text that indicates one or more diseases, injuries, or 
+                                         complications that were implicated as a cause of the person's death. -->
+                                    <!-- Cause of Death: Due to (or as a consequence of) -->
+                                    <value xsi:type="ED">Blunt head trauma, </value>
+                                    <entryRelationship typeCode="COMP">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <!-- [VRDR STU2] Disease Onset to Death Interval -->
+                                            <templateId root="2.16.840.1.113883.10.20.26.1.3.18" extension="2016-12-01" />
+                                            <!-- A measure of the time interval between the onset of 
+                                             the disease, injury or complication, and the person's death. -->
+                                            <!-- Cause of Death: Approximate interval: Onset to death -->
+                                            <code code="69440-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                                displayName="Disease onset to death interval" />
+                                            <value xsi:type="ED">15 hours</value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <!-- Cause of death: line number -->
+                                <sequenceNumber value="2" />
+                                <seperatableInd value="false" />
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Cause of Death -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.16" extension="2016-12-01" />
+                                    <code code="69543-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Cause Of Death (US Standard Certificate of Death)" />
+                                    <value xsi:type="ED">Automobile accident</value>
+                                    <entryRelationship typeCode="COMP">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <!-- [VRDR STU2] Disease Onset to Death Interval -->
+                                            <templateId root="2.16.840.1.113883.10.20.26.1.3.18" extension="2016-12-01" />
+                                            <code code="69440-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                                displayName="Disease onset to death interval" />
+                                            <!-- A measure of the time interval between the onset of 
+                                                 the disease, injury or complication, and the person's death. -->
+                                            <!-- Cause of Death: Approximate interval: Onset to death -->
+                                            <value xsi:type="ED">2 months</value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <!-- Cause of death: line number -->
+                                <sequenceNumber value="3" />
+                                <seperatableInd value="false" />
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Cause of Death -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.16" extension="2016-12-01" />
+                                    <code code="69543-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Cause Of Death (US Standard Certificate of Death)" />
+                                    <!-- Cause of Death: Due to (or as a consequence of) -->
+                                    <value xsi:type="ED">Epilepsy</value>
+                                    <entryRelationship typeCode="COMP">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <!-- [VRDR STU2] Disease Onset to Death Interval -->
+                                            <templateId root="2.16.840.1.113883.10.20.26.1.3.18" extension="2016-12-01" />
+                                            <code code="69440-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                                displayName="Disease onset to death interval" />
+                                            <!-- A measure of the time interval between the onset of 
+                                                 the disease, injury or complication, and the person's death. -->
+                                            <!-- Cause of Death: Approximate interval: Onset to death -->
+                                            <value xsi:type="ED">30 years</value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <sequenceNumber value="0" />
+                                <seperatableInd value="false" />
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Death Cause Other Significant Condition -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.17" extension="2016-12-01" />
+                                    <code code="69441-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Death cause other significant conditions" />
+                                    <!-- Death cause: Other significant condition contributing to death -->
+                                    <value xsi:type="ED">Cerebrovascular accident</value>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <!-- [VRDR STU2] Injury Organizer (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.9" extension="2016-12-01" />
+                            <statusCode code="completed" />
+                            <component typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Injury Involved in Death -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.40" extension="2016-12-01" />
+                                    <code code="71481-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                        displayName="Did the death of this person involve injury of any kind" />
+                                    <value xsi:type="CD" code="Y" codeSystem="2.16.840.1.113883.12.136"
+                                        codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="Yes" />
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Injury Details -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.33" extension="2016-12-01" />
+                                    <code code="11374-6" displayName="Injury incident description" codeSystem="2.16.840.1.113883.6.1"
+                                        codeSystemName="LOINC" />
+                                    <text mediaType="text/plain">Car left road, hit tree and rolled over.</text>
+                                    <!-- Date/time of injury -->
+                                    <effectiveTime value="20161101" />
+                                    <!-- Location of injury -->
+                                    <participant typeCode="LOC">
+                                        <participantRole classCode="ROL">
+                                            <!-- Location of injury (address) -->
+                                            <addr>
+                                                <streetAddressLine>22 Any Street</streetAddressLine>
+                                                <city>Anyville</city>
+                                                <postalCode>12345</postalCode>
+                                                <country>US</country>
+                                            </addr>
+                                            <playingEntity classCode="PLC">
+                                                <code code="4" displayName="Street/Highway" codeSystem="2.16.840.1.113883.6.3" codeSystemName="ICD10"
+                                                 />
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Injury Association with Transportation Event -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.34" extension="2016-12-01" />
+                                    <code code="69448-9" displayName="Injury leading to death associated with transportation event"
+                                        codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                    <value xsi:type="CD" code="Y" codeSystem="2.16.840.1.113883.12.136"
+                                        codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="Yes" />
+                                    <participant typeCode="SBJ">
+                                        <participantRole>
+                                            <code code="236320001" displayName="Driver/Operator" codeSystem="2.16.840.1.113883.6.96"
+                                                codeSystemName="SNOMED CT" />
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </component>
+                            <component typeCode="COMP">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [VRDR STU2] Injury Association with Work -->
+                                    <templateId root="2.16.840.1.113883.10.20.26.1.3.41" extension="2016-12-01" />
+                                    <code code="69444-8" displayName="Did death result from injury at work" codeSystem="2.16.840.1.113883.6.1"
+                                        codeSystemName="LOINC" />
+                                    <value xsi:type="CD" code="N" codeSystem="2.16.840.1.113883.12.136"
+                                        codeSystemName="Yes/no indicator (HL7 Table 0136)" displayName="No" />
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU2] Pregnancy Status (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.12" extension="2016-12-01" />
+                            <code code="69442-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pregnancy Status" />
+                            <!-- The information in this template is only required if the decedent is 
+                                 female and in the age range of 5 to 75 years. In other cases, 
+                                 e.g., male decedent, the nullFlavor="NA", should be provided. -->
+                            <!--  <value xsi:type="CD" nullFlavor="NA"/>-->
+                            <value xsi:type="CD" code="PHC1260" codeSystem="2.16.840.1.114222.4.5.274"
+                                codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Not pregnant within the past year" />
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <!-- [VRDR STU2] Tobacco Use Contributed to Death (V2) -->
+                            <templateId root="2.16.840.1.113883.10.20.26.1.14" extension="2016-12-01" />
+                            <code code="69443-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                displayName="Did tobacco use contribute to death" />
+                            <value xsi:type="CD" code="373067005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="No" />
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

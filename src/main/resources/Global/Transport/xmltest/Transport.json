@@ -1,0 +1,11 @@
+[
+  {
+    "protocol": "rest",
+    "domain": "erx",
+    "forms": {
+      "TA_INITIATOR": "TA_INITIATOR_REST_FORM.html",
+      "SUT_INITIATOR": "SUT_INITIATOR_REST_FORM.html"
+    }
+  }
+
+]

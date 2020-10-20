@@ -1,0 +1,338 @@
+<ClinicalDocument xmlns="urn:hl7-org:v3">
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.26.1" extension="2016-12-01"/>
+  <templateId root="2.16.840.1.113883.10.20.26.1.1.3" extension="2016-12-01"/>
+  <id root="ada4619b-2b27-4c3d-861a-9df729df0f95"/>
+  <code code="69409-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="&quot;U.S. standard certificate of death -- 2003 revision"/>
+  <title>U.S. standard certificate of death -- 2003 revision</title>
+  <effectiveTime value="20171018102631"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.11.3883.5.25" codeSystemName="Confidentiality" displayName="Normal"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="999-99-9999" root="2.16.840.1.113883.4.1"/>
+      <addr>
+        <city>Baltimore</city>
+        <country>USA</country>
+        <county/>
+        <postalCode>21111</postalCode>
+        <state>MD</state>
+        <streetAddressLine>123 Main St</streetAddressLine>
+        <streetAddressLine/>
+      </addr>
+      <patient>
+        <name use="L">
+          <family>Smith</family>
+          <given>John</given>
+          <given>Peter</given>
+          <prefix>Dr</prefix>
+          <suffix/>
+        </name>
+        <administrativeGenderCode code="M"/>
+        <birthTime value="20000101"/>
+        <urn:deceasedInd value="true" xmlns:urn="urn:hl7-org:sdtc"/>
+        <urn:deceasedTime value="20170101" xsi:type="UVP_TS" probability="1" xmlns:urn="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <maritalStatusCode codeSystem="2.16.840.1.113883.12.2" codeSystemName="Marital status (HL7)" code="S"/>
+        <raceCode codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp;amp; Ethnicity - CDC" code="2054-5"/>
+        <urn:raceCode codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp;amp; Ethnicity - CDC" code="2106-3" xmlns:urn="urn:hl7-org:sdtc"/>
+        <ethnicGroupCode codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp;amp; Ethnicity - CDC" code="2180-8"/>
+        <birthplace>
+          <place>
+            <addr>
+              <city nullFlavor="UNK"/>
+              <state nullFlavor="UNK"/>
+              <country>USA</country>
+            </addr>
+          </place>
+        </birthplace>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT" contextControlCode="OP">
+    <time/>
+    <assignedAuthor classCode="ASSIGNED">
+      <id/>
+    </assignedAuthor>
+  </author>
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id/>
+        <name/>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.26.1.2.5" extension="2016-12-01"/>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list"/>
+          <title>Coded Cause Of Death Section</title>
+          <text><![CDATA[<table><thead><tr><th>Cause Of Death</th></tr><tr><th>Disease Onset To Death Interval</th></tr><tr><th>Injury Involved In Death</th></tr><tr><th>Tobacco Use Contributed to Death</th></tr></thead><tr>R10 </td></tr><tr>2 years </td></tr><tr>nope </td></tr><tr>nope </td></tr></tbody></table>]]></text>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.26" extension="2016-12-01"/>
+              <statusCode code="completed"/>
+              <component>
+                <sequenceNumber value="1"/>
+                <seperatableInd value="false"/>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.27" extension="2016-12-01"/>
+                  <code code="80356-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death entity axis code"/>
+                  <value code="R10" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.26.1.3.30" extension="2016-12-01"/>
+                      <code code="PHC1427" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sequence within line"/>
+                      <value value="1" xsi:type="INT" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.28" extension="2016-12-01"/>
+                  <code code="80357-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death record axis code"/>
+                  <value code="R10" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.29" extension="2016-12-01"/>
+                  <code code="80358-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cause of death.underlying [Automated]"/>
+                  <value code="R10" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.31" extension="2016-12-01"/>
+                  <code code="PHC1422" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Conversion Flag"/>
+                  <value code="PHC1376" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Conversion using non-ambivalent table entries" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.9" extension="2016-12-01"/>
+              <statusCode/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.40" extension="2016-12-01"/>
+                  <code code="71481-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Did the death of this person involve injury of any kind"/>
+                  <value code="nope" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.12" extension="2016-12-01"/>
+              <code code="69442-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pregnancy Status"/>
+              <value code="PHC1260" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Not pregnant within the past year" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.14" extension="2016-12-01"/>
+              <code code="69443-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Did tobacco use contribute to death"/>
+              <value code="nope" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.21" extension="2016-12-01"/>
+              <code code="80626-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Activity at time of death"/>
+              <value code="PHC1350" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="During unspecified activity" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.26.1.2.3" extension="2016-12-01"/>
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of procedures"/>
+          <title>Death Administration Section</title>
+          <text>He's dead, Jim.</text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.15" extension="2016-12-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09"/>
+              <id/>
+              <code code="446661000124101" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Death pronouncement"/>
+              <statusCode code="completed"/>
+              <effectiveTime value="20170101"/>
+            </act>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.26.1.2" extension="2016-12-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09"/>
+              <id/>
+              <code code="29240004" displayName="Autopsy Procedure" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+              <statusCode code="completed"/>
+              <effectiveTime/>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3" extension="2016-12-01"/>
+                  <code code="69436-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Autopsy results available"/>
+                  <value value="true" xsi:type="BL" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </entryRelationship>
+            </procedure>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.7" extension="2016-12-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09"/>
+              <id/>
+              <code code="308646001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Death certification"/>
+              <statusCode code="completed"/>
+              <effectiveTime/>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.4" extension="2016-12-01"/>
+              <code code="74497-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical examiner or coroner was contacted"/>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.5"/>
+                  <code code="69438-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Referral note forensic medicine"/>
+                  <value xsi:type="ED" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Examined this guy.</value>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="REG" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.46" extension="2016-12-01"/>
+              <code code="307928008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="&quot;Death administrative procedure"/>
+              <effectiveTime value="20150101"/>
+            </act>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.42" extension="2016-12-01"/>
+              <code code="80905-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Method of disposition"/>
+              <value code="1234" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.26.1.2.6" extension="2016-12-01"/>
+          <code code="TEMP_LOINC_DEATH_EVENT_SECTION" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Death Event Section"/>
+          <title>Death Event Section</title>
+          <text>He's dead, Jim.</text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.8" extension="2016-12-01"/>
+              <code code="58332-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Location of Death"/>
+              <value code="63238001" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.10" extension="2016-12-01"/>
+              <code code="58332-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Location of Death"/>
+              <value xsi:type="AD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <city>Baltimore</city>
+                <country>USA</country>
+                <county/>
+                <postalCode>21111</postalCode>
+                <state>MD</state>
+                <streetAddressLine>123 Main St</streetAddressLine>
+                <streetAddressLine/>
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.11"/>
+              <code code="69449-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Manner of Death"/>
+              <value code="38605008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.26.1.2.1" extension="2016-12-01"/>
+          <code code="45970-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Demographic Section"/>
+          <title>Decedent Demographics Section</title>
+          <text>He's dead, Jim.</text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.36" extension="2016-12-01"/>
+              <templateId root="2.16.840.1.113883.10.20.22.4.31"/>
+              <id/>
+              <code code="445518008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Age At Onset"/>
+              <statusCode code="completed"/>
+              <value value="65" unit="a" xsi:type="PQ" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.37" extension="2016-12-01"/>
+                  <code code="PHC1421" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System" displayName="PHC1421"/>
+                  <value code="PHC1362" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Edit Passed" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <act classCode="REG" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.45" extension="2016-12-01"/>
+              <id extension="12345"/>
+              <code code="444561001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Birth certificate"/>
+              <effectiveTime value="1917"/>
+            </act>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.35" extension="2016-12-01"/>
+              <code code="80913-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Decedent education level"/>
+              <value code="PHC1453" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.43" extension="2016-12-01"/>
+                  <code code="PHC1424" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System" displayName="Education Level Edit Flag"/>
+                  <value code="PHC1453" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.49" extension="2016-12-01"/>
+              <code code="PHC1426" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Edit Passed"/>
+              <value code="PHC1362" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Edit Passed" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.38" extension="2016-12-01"/>
+              <code code="21843-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of usual occuptation"/>
+              <value code="123" codeSystem="2.16.840.1.114222.4.5.314" codeSystemName="Occupation CDC Census" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.26.1.3.39" extension="2016-12-01"/>
+                  <code code="21844-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="&quot;History of usual industry"/>
+                  <value code="PLACEHOLDER" codeSystem="2.16.840.1.114222.4.5.315" codeSystemName="&quot;Industry CDC Census 2010" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.26.1.3.48" extension="2016-12-01"/>
+              <code code="PHC1432" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Sex Edit Flag"/>
+              <value code="PHC1362" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" displayName="Edit Passed" xsi:type="CD" xmlns:urn="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
