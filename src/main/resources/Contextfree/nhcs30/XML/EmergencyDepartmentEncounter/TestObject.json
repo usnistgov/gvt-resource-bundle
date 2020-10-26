@@ -1,9 +1,9 @@
 {
-  "name": "Emergency Department Encounter",
-  "description": "Emergency Department Encounter.",
+  "name": "Emergency Department Encounter Document",
+  "description": "Emergency Department Encounter Document.",
   "position": 1,
   "version":"1",
-  "id":"12038",
+  "id":"1",
   "xml": {
       "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
       "schematronPathList": ["CDAR2_IG_NHCS_R1_D4_2019SEP.sch"]

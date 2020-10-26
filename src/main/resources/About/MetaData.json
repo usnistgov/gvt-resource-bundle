@@ -12,14 +12,14 @@
 			"authorUsername":"nico"
  		},
  		{
-			"key": "xmltest",
+			"key": "nhcs30",
 			"position": 2,
 			"rsbVersion"	:"${project.version}-${ts}",
 	    		"version"		: "${metadata.version}",
 	    		"igVersion"		:"",
 	    		"scope": "GLOBAL",
-			"name": "XML Test",
-			"homeTitle": "XML testing",
+			"name": "NHCS Version 3",
+			"homeTitle": "NHCS Version 3 Validation Testing",
 			"authorUsername":"nico"
  		}
  	
