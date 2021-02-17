@@ -3,11 +3,15 @@
 
 xmlns:sch="http://www.ascc.net/xml/schematron"
 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+
 --> 
 <sch:schema xmlns:sch="http://www.ascc.net/xml/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process">
     <sch:ns prefix="cda" uri="urn:hl7-org:v3" />
-    <sch:pattern>
+    <sch:phase id="errors">
+        <sch:active pattern="ED1"/>
+    </sch:phase>
+    <sch:pattern id="ED1" name="ED1">
        
         <sch:rule context="/">
             
@@ -191,11 +195,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:author">
                 Lab Test must contain a vendor supplied author.
             </sch:assert>    
-            
+            <!--
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.4.1']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.26']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.27'][cda:templateId/@extension='2014-06-09'][cda:code/@code='8302-2']/cda:value/[@value='72' and @unit='cm']">
                 Vital Sign height must be 180 cm.
             </sch:assert>    
-           
+           -->
             
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.4.1']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.26']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.27'][cda:templateId/@extension='2014-06-09'][cda:code/@code='3141-9']/cda:value/@value='98'">
                 Vital Sign weight must be 98 kg.
@@ -311,4 +315,5 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
         </sch:rule>
         
     </sch:pattern>
+    
 </sch:schema>
