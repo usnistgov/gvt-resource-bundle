@@ -1,6 +1,0 @@
-{
-   "name":"Void Certificate Reporting Messaging Information Group",
-   "description":"This use case examines the ability of the communication of information regarding voided death certificates in a Jurisdiction Void Certificate Report from a jurisdictional vital records office to the National Center for Health Statistics (NCHS). Void Death Certificate Document: These clinical statements represent information on which certificate numbers are not to be used or are 'voided' from appropriate local, state, and territorial vital statistics agencies for reporting to vital records. This document type supports the Void Certificate Reporting Messaging use case.",
-   "id":15033,
-   "position":5
-}

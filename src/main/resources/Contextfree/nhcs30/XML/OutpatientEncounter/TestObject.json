@@ -1,0 +1,11 @@
+{
+  "name": "Outpatient Encounter Document",
+  "description": "Outpatient Encounter Document.",
+  "position": 3,
+  "version":"1",
+  "id":"3",
+  "xml": {
+      "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
+      "schematronPathList": ["CDAR2_IG_NHCS_R1_D4_2019SEP.sch"]
+  }
+}
