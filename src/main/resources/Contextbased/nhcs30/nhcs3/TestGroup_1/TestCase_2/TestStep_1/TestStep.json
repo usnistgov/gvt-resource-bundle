@@ -1,5 +1,5 @@
 {
-  "name":"Doctor creates Vital Records CDA with input data and submits to CDC",
+  "name":"Doctor creates inpatient NHCS with input data and submits to CDC",
   "position":1,
   "version":"1",
   "id":"15005",
@@ -8,6 +8,6 @@
       "schematronPathList": ["CDAR2_IG_EHR2VRDRPT_R1_D2_2017JAN_PDR.sch"]
   },
   "type":"SUT_INITIATOR",
-  "description":"Doctor creates Vital Records CDA with input data and submits to CDC",
+  "description":"Doctor creates inpatient NHCS with input data and submits to CDC",
   "protocols":["rest"]
 }

@@ -5,7 +5,7 @@
   "id":"15002",
   "xml": {
       "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
-      "schematronPathList": ["TestDataED1.sch"]
+      "schematronPathList": ["CDAR2_IG_EHR2VRDRPT_R1_D2_2017JAN_PDR.sch"]
   },
   "type":"SUT_INITIATOR",
   "description":"Create ED NHCS",

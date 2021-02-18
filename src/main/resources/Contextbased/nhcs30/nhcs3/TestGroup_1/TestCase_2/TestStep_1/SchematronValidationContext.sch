@@ -9,8 +9,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process">
     <sch:ns prefix="cda" uri="urn:hl7-org:v3" />
     <sch:ns prefix="sdtc" uri="urn:hl7-org:sdtc" />
-    
-    <sch:pattern>
+    <sch:phase id="errors">
+        <sch:active pattern="IP1"/>
+    </sch:phase>
+    <sch:pattern id="IP1" name="IP1">
+
         
         <sch:rule context="/">
             

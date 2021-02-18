@@ -10,7 +10,10 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     <sch:ns prefix="cda" uri="urn:hl7-org:v3" />
     <sch:ns prefix="sdtc" uri="urn:hl7-org:sdtc" />
     
-    <sch:pattern>
+    <sch:phase id="errors">
+        <sch:active pattern="OP1"/>
+    </sch:phase>
+    <sch:pattern id="OP1" name="OP1">
         
         <sch:rule context="/">
             
