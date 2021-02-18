@@ -624,28 +624,7 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.23'][cda:templateId/@extension='2014-06-09']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.135']/cda:supply[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.50'][cda:templateId/@extension='2014-06-09']/cda:participantRole[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.37']/cda:playingDevice/cda:id[@root='12-151417']">
                 Device catalog number MUST be 12-151417
             </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
-
-            <sch:assert test="">
-                MUST be 
-            </sch:assert>
+           
 
         </sch:rule>
         
