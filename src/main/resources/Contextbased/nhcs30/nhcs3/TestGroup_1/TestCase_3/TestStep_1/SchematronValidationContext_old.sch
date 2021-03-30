@@ -206,11 +206,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='12']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='12']">
                 Lab Test - Interpretation Hemoglobin reference range must be 12.0 - 15.5 g/dL. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='15.5']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='15.5']">
                 Lab Test - Interpretation Hemoglobin reference range must be 12.0 - 15.5 g/dL. 
             </sch:assert>
             
@@ -232,11 +232,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='35.5']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='35.5']">
                 Lab Test - Interpretation Hematocrit Auto reference range must be 35.5-44.9 percent. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='44.9']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='44.9']">
                 Lab Test - Interpretation Hematocrit Auto reference range must be 35.5-44.9 percent. 
             </sch:assert>
             
@@ -261,11 +261,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='80' and @units='fL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='80' and @units='fL']">
                 Lab Test - Interpretation MCV reference range must be 80-95 fL. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='95' and @units='fL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='95' and @units='fL']">
                 Lab Test - Interpretation MCV reference range must be 80-95 fL. 
             </sch:assert>
             
@@ -288,11 +288,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='27.5' and @units='pg']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='27.5' and @units='pg']">
                 Lab Test - Interpretation Mean Corpuscular hemoglobin reference range must be 27.5 to 33.2 pg. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='33.2' and @units='pg']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='33.2' and @units='pg']">
                 Lab Test - Interpretation Mean Corpuscular hemoglobin reference range must be 27.5 to 33.2 pg. 
             </sch:assert>
             
@@ -314,11 +314,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='157000' and @units='mcL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='157000' and @units='mcL']">
                 Lab Test - Interpretation Platelets reference range must be 157,000-371,000/mcL. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='371000' and @units='mcL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='371000' and @units='mcL']">
                 Lab Test - Interpretation Platelets reference range must be 157,000-371,000/mcL. 
             </sch:assert>
             
@@ -341,11 +341,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='136' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='136' and @units='mmol/L']">
                 Lab Test - Interpretation Sodium reference range must be 136 to 144 mmol/L . 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='144' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='144' and @units='mmol/L']">
                 Lab Test - Interpretation Sodium reference range must be 136 to 144 mmol/L . 
             </sch:assert>
             
@@ -367,11 +367,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='3.7' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='3.7' and @units='mmol/L']">
                 Lab Test - Interpretation Potassium reference range must be 3.7 to 5.2 mmol/L. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='5.2' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='5.2' and @units='mmol/L']">
                 Lab Test - Interpretation Potassium reference range must be 3.7 to 5.2 mmol/L. 
             </sch:assert>
             
@@ -393,11 +393,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='96' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='96' and @units='mmol/L']">
                 Lab Test - Interpretation Chloride reference range must be 96 to 106 mmol/L. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='106' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='106' and @units='mmol/L']">
                 Lab Test - Interpretation Chloride reference range must be 96 to 106 mmol/L. 
             </sch:assert>
             
@@ -420,11 +420,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='23' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='23' and @units='mmol/L']">
                 Lab Test - Interpretation Carbon dioxide reference range must be 23 to 29 mmol/L. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='29' and @units='mmol/L']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='29' and @units='mmol/L']">
                 Lab Test - Interpretation Carbon dioxide reference range must be 23 to 29 mmol/L. 
             </sch:assert>
             
@@ -448,11 +448,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='64' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='64' and @units='mg/dL']">
                 Lab Test - Interpretation Glucose reference range must be 64 to 100 mg/dL. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='100' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='100' and @units='mg/dL']">
                 Lab Test - Interpretation Glucose reference range must be 64 to 100 mg/dL. 
             </sch:assert>
             
@@ -475,11 +475,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='7' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='7' and @units='mg/dL']">
                 Lab Test - Interpretation Urea nitrogen reference range must be 7 to 20 mg/dl. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='20' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='20' and @units='mg/dL']">
                 Lab Test - Interpretation Urea nitrogen reference range must be 7 to 20 mg/dl. 
             </sch:assert>
             
@@ -501,11 +501,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Lab Test - Interpretation Author MUST be vendor supplied. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:low[@value='0.8' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:low[@value='0.8' and @units='mg/dL']">
                 Lab Test - Interpretation Creatinine reference range must be 0.8 to 1.2 mg/dL. 
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:observationRange/cda:value/cda:high[@value='1.2' and @units='mg/dL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3' and @extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1' and @extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2' and @extension='2015-08-01']/cda:referenceRange/cda:high[@value='1.2' and @units='mg/dL']">
                 Lab Test - Interpretation Creatinine reference range must be 0.8 to 1.2 mg/dL. 
             </sch:assert>
             
