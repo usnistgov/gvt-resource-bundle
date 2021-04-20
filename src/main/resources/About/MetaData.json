@@ -18,8 +18,8 @@
 	    		"version"		: "${metadata.version}",
 	    		"igVersion"		:"",
 	    		"scope": "GLOBAL",
-			"name": "NHCS Version 3",
-			"homeTitle": "NHCS Version 3 Validation Testing",
+			"name": "NHCS CDA Release 3",
+			"homeTitle": "NHCS CDA Release 3 Validation Testing",
 			"authorUsername":"nico"
  		}
  	
