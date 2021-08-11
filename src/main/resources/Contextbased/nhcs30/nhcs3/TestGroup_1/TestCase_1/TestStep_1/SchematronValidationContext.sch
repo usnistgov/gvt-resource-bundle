@@ -11,7 +11,7 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     <sch:phase id="errors">
         <sch:active pattern="ED1"/>
     </sch:phase>
-    <sch:pattern id="ED1" name="ED1">
+    <sch:pattern id="ED1" >
        
         <sch:rule context="/">
             
@@ -48,15 +48,17 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:id[@root='2.16.840.1.113883.4.572' and @extension = '2DF6TH5NZ22']">
                 Patient Medicare Beneficiary ID (MBI) must be 2DF6TH5NZ22. 
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:id[@root='830126492']">
+            <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:id[@extension='830126492']">
                 Patient medical record number must be 830126492. 
             </sch:assert>
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:id[@root='2.16.840.1.113883.4.1' and @extension = '772-89-6926']">
                 Patient SSN must be 772-89-6926. 
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:telecom[@use='MC'] = '666-555-4444'">
-                Patient mobile contact must be 666-555-4444. 
+            <!-- Removing 5/11/2021
+            <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:telecom[@use='MC' and @value = '6665554444']">
+                Patient mobile contact must be 6665554444. 
             </sch:assert>
+            -->
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:birthTime[@value = '19820309']">
                 Patient birthdate must be 19820309
             </sch:assert>
@@ -101,15 +103,17 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Document assigned author code must be 208M00000X.
             </sch:assert>     
 
-            <sch:assert test="/cda:ClinicalDocument/cda:author/cda:assignedAuthor/cda:name">
+            <sch:assert test="/cda:ClinicalDocument/cda:author/cda:assignedAuthor/cda:assignedPerson/cda:name">
                 Document must contain a vendor supplied assigned author, assigned person name.
             </sch:assert>     
+            <!-- Removed 6/21/2021 -->
+            <!--
             <sch:assert test="/cda:ClinicalDocument/cda:author/cda:assignedAuthor/cda:assignedAuthoringDevice">
                 Document must contain a vendor supplied assigned author, assigned authoring device.
             </sch:assert> 
-            
+            -->
             <!-- Legal authenticator -->
-
+<!-- Removed 6/4/2021
             <sch:assert test="/cda:ClinicalDocument/cda:legalAuthenticator/cda:dateTime">
                 Document must contain a vendor supplied legal authenticator date/time.
             </sch:assert> 
@@ -117,7 +121,7 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:legalAuthenticator/cda:signatureCode">
                 Document must contain a vendor supplied legal authenticator signature code.
             </sch:assert> 
-            
+            -->
             <!-- Document header -->
             
             <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.1' and @extension='2019-08-01']">
@@ -139,7 +143,7 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Document types of care providers seen must include 163W00000X.
             </sch:assert> 
             
-            <sch:assert test="/cda:ClinicalDocument/cda:documentationOf/cda:serviceEvent/cda:performer/cda:assignedEntity/cda:code[@code='104100000X']">
+            <sch:assert test="/cda:ClinicalDocument/cda:documentationOf/cda:serviceEvent/cda:performer/cda:functionCode[@code='104100000X']">
                 Document types of care providers seen must include 104100000X.
             </sch:assert> 
             
@@ -147,15 +151,15 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Document encompassing encounter must be EMER. 
             </sch:assert> 
             
-            <sch:assert test="/cda:ClinicalDocument/cda:componentOf/cda:encompassingEncounter/cda:dischargeDispositionCode[@code='432661000124104']">
+            <sch:assert test="/cda:ClinicalDocument/cda:componentOf/cda:encompassingEncounter/cda:dischargeDispositionCode[@code='09']">
                 Document dischargeDispositionCode must be 432661000124104. 
             </sch:assert> 
             
-            <sch:assert test="/cda:ClinicalDocument/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.13' and @extension='2019-08-01']/cda:encounter[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.40' and @extension='2019-08-01']/cda:entryRelationship/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.202' and @extension='2016-11-01']/cda:reference/cda:text/@value">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId[@root='2.16.840.1.113883.10.20.34.2.13' and @extension='2019-08-01']]/cda:entry/cda:encounter[cda:templateId[@root='2.16.840.1.113883.10.20.34.3.40' and @extension='2019-08-01']]/cda:entryRelationship/cda:act[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.202' and @extension='2016-11-01']]/cda:text/cda:reference/@value">
                 Clinicial notes text must exist. 
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:section/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.6'][cda:templateId/@extension='2019-08-01']/cda:value[@value='T40.2X1a']">
-                Primary diagnosis must be T40.2X1a. 
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section/cda:entry/cda:encounter/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.6'][cda:templateId/@extension='2019-08-01']/cda:value[@code='241749009']/cda:translation[@code='T40.2X1a']">
+                Primary diagnosis must be 241749009 with a translation of T40.2X1a. 
             </sch:assert> 
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.5.1'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.3'][cda:templateId/@extension='2015-08-01']/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.4'][cda:templateId/@extension='2015-08-01']/cda:value[@code='269691005']">
                 Active Problems must include 269691005.
@@ -167,32 +171,32 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.5.1'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.3'][cda:templateId/@extension='2015-08-01']/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.4'][cda:templateId/@extension='2015-08-01']/cda:value[@code='6525002']">
                 Active Problems must include 6525002.
             </sch:assert> 
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:code/@code='72479-9'">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:code/@code='72479-9'">
                 Lab Tests - Test Order Code must include 72479-9.
             </sch:assert> 
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:code/@code='51691-4'">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:code[@code='51691-4']">
                 Lab Tests - Test Code must include 51691-4.
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:value[@value='8' and @unit='ng/mL']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:value[@value='8' and @unit='ng/mL']">
                 Lab Test - Quantitative Result must be "8 ng/mL"
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:interpretationCode/@code='POS'">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:interpretationCode/@code='POS'">
                 Lab Test - Qualitative Result must be "POS"
             </sch:assert>           
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:author">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:author">
                 Lab Test must contain a vendor supplied author.
             </sch:assert>    
            
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:code/@code='50021-5'">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:code/@code='50021-5'">
                 Lab Tests - Test Code must include 50021-5.
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:value/@value='> 2 ng/mL'">
-                Lab Test - Quantitative Result must be "> 2 ng/mL"
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:value[@value='3' and @unit='ng/mL']">
+                Lab Test - Quantitative Result must be 3 ng/mL
             </sch:assert>
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:interpretationCode/@code='POS'">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:interpretationCode/@code='POS'">
                 Lab Test - Qualitative Result must be "POS"
             </sch:assert>           
-            <sch:assert test="/cda:ClinicalDocument/cda:structuredBody/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:author">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.3'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:organizer[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.1'][cda:templateId/@extension='2015-08-01']/cda:component/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.2'][cda:templateId/@extension='2015-08-01']/cda:author">
                 Lab Test must contain a vendor supplied author.
             </sch:assert>    
             <!--
@@ -272,11 +276,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Discharge medication dose quantity MUST be 1 tab.
             </sch:assert>  
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.1'][cda:templateId/@extension='2019-04-01']/cda:entryRelationship/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.16']/cda:effectiveTime/cda:low">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.11.1'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.35'][cda:templateId/@extension='2016-03-01']/cda:entryRelationship/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.16']/cda:effectiveTime/cda:low">
                 Discharge medication Start Date must be vendor supplied.
             </sch:assert>
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.1'][cda:templateId/@extension='2019-04-01']/cda:entryRelationship/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.16']/cda:effectiveTime/cda:high">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.11.1'][cda:templateId/@extension='2015-08-01']/cda:entry/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.35'][cda:templateId/@extension='2016-03-01']/cda:entryRelationship/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.16']/cda:effectiveTime/cda:high">
                 Discharge medication End Date must be vendor supplied.
             </sch:assert>
             
@@ -308,8 +312,8 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Procedure observation performer MUST be vendor supplied.
             </sch:assert> 
 
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.7']/cda:entry/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.120']/cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@code='112']">
-                Immunization code MUST be 112.
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.7']/cda:entry/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.52']/cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@code='113']">
+                Immunization code MUST be 113.
             </sch:assert> 
 
         </sch:rule>
