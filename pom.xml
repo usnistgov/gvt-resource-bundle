@@ -60,12 +60,12 @@
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
-			<url>http://129.6.24.81:9001/repository/releases/</url>
+			<url>https://hit-nexus.nist.gov/repository/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>Internal Snapshots</name>
-			<url>http://129.6.24.81:9001/repository/snapshots</url>
+			<url>https://hit-nexus.nist.gov/repository/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
