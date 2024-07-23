@@ -1,0 +1,11 @@
+{
+  "id" : 4938505,
+  "name": "StrengthTest",
+  "description": "Validation test", 
+  "position": 1,
+  "hl7v2": {
+       "messageId": "6309135e87d1ae142ee05d26",
+	  "valueSetLibraryId": "6309135e87d1ae142ee05d25",
+	  "constraintId": "6309135e87d1ae142ee05d25"
+  }
+}
