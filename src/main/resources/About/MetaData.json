@@ -21,6 +21,17 @@
 			"name": "NHCS CDA Release 3",
 			"homeTitle": "NHCS CDA Release 3 Validation Testing",
 			"authorUsername":"nico"
+ 		},
+		{
+			"key": "nhcs31",
+			"position": 3,
+			"rsbVersion"	:"${project.version}-${ts}",
+	    		"version"		: "${metadata.version}",
+	    		"igVersion"		:"",
+	    		"scope": "GLOBAL",
+			"name": "NHCS CDA Release 3.1",
+			"homeTitle": "NHCS CDA Release 3.1 Validation Testing",
+			"authorUsername":"mccaffrey"
  		}
  	
 	]
