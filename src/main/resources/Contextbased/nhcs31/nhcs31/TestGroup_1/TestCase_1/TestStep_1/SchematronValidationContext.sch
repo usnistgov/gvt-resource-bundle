@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-
+NHCS v3.1 Emergency Department (ED) sample
 xmlns:sch="http://www.ascc.net/xml/schematron"
 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
 
 --> 
-<sch:schema xmlns:sch="http://www.ascc.net/xml/schematron" queryBinding="xslt2"
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process">
     <sch:ns prefix="cda" uri="urn:hl7-org:v3" />
     <sch:phase id="errors">
@@ -26,10 +26,11 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget[1]/cda:patientRole[1]/cda:patient[1]/cda:name[1]/cda:family[1] = 'Pearce'">
                 Family name must be Pearce.
             </sch:assert>
-            
+            <!-- Removed in 3.1
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:addr[@use = 'H']">
                 Patient Home ('H') address must exist
             </sch:assert>
+            -->
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:addr/cda:streetAddressLine[1] = '75755 Shopko Court'">
                 Patient address Street Address Line must be 75755 Shopko Court.
             </sch:assert>
@@ -66,15 +67,13 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Patient administrativeGenderCode must be F.
             </sch:assert>
 
-
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.5']/cda:entry/cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.34.3.45' and @extension='2019-04-01']]/cda:value[@code = '446141000124107']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16'][cda:templateId/@extension='2022-01-01']/cda:entry/cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.34.3.45' and @extension='2022-06-01']]/cda:value[@code = '446141000124107']">
                 Patient gender identity must be 446141000124107.
             </sch:assert>
-            <!-- XPATH broken
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[@root='2.16.840.1.113883.10.20.34.2.5']/cda:entry/cda:observation[cda:templateId/@root=/observation[templateId/@root="2.16.840.1.113883.10.20.22.4.200"][templateId/@extension="2016-06-01"]/value = 'F'">
-                Patient gender identity must be 446141000124107.
+           
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16'][cda:templateId/@extension='2022-01-01']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.200'][cda:templateId/@extension='2016-06-01']/cda:value[@code = 'F']">
+                Patient birth sex must be F.
             </sch:assert>
-            -->
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:raceCode/@code = '2106-3'">
                 Patient race must be 2106-3.
             </sch:assert>
@@ -124,8 +123,8 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             -->
             <!-- Document header -->
             
-            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.1' and @extension='2019-08-01']">
-                Document templateId must be root = 2.16.840.1.113883.10.20.34.1.1 and extension= 2019-08-01.
+            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.4' and @extension='2022-01-01.3.1']">
+                Document templateId must be root = 2.16.840.1.113883.10.20.34.1.4 and extension= 2022-01-01.3.1.
             </sch:assert> 
             <sch:assert test="/cda:ClinicalDocument/cda:code[@code='75619-7']">
                 Document code must be 75619-7.
@@ -147,6 +146,16 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 Document types of care providers seen must include 104100000X.
             </sch:assert> 
             
+            <sch:assert test="/cda:ClinicalDocument/cda:documentationOf/cda:serviceEvent/cda:performer/cda:time/cda:low">
+                Document types of care providers time must be vendor supplied.
+            </sch:assert> 
+            
+            
+            <sch:assert test="/cda:ClinicalDocument/cda:componentOf/cda:encompassingEncounter/cda:id[@extension='394857']">
+                Document encompassing encounter ID / extension must be 394857 
+            </sch:assert> 
+            
+            
             <sch:assert test="/cda:ClinicalDocument/cda:componentOf/cda:encompassingEncounter/cda:code[@code='EMER']">
                 Document encompassing encounter must be EMER. 
             </sch:assert> 
@@ -157,6 +166,10 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId[@root='2.16.840.1.113883.10.20.34.2.13' and @extension='2019-08-01']]/cda:entry/cda:encounter[cda:templateId[@root='2.16.840.1.113883.10.20.34.3.40' and @extension='2019-08-01']]/cda:entryRelationship/cda:act[cda:templateId[@root='2.16.840.1.113883.10.20.22.4.202' and @extension='2016-11-01']]/cda:text/cda:reference/@value">
                 Clinicial notes text must exist. 
+            </sch:assert>
+            
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId[@root='2.16.840.1.113883.10.20.34.2.14' and @extension='2019-08-01']]/cda:text">
+                A chief complaint and reason for visit section must exist with text.
             </sch:assert>
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section/cda:entry/cda:encounter/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.6'][cda:templateId/@extension='2019-08-01']/cda:value[@code='241749009']/cda:translation[@code='T40.2X1a']">
                 Primary diagnosis must be 241749009 with a translation of T40.2X1a. 
@@ -311,11 +324,13 @@ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.7.1'][cda:templateId/@extension='2014-06-09']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.13'][cda:templateId/@extension='2014-06-09']/cda:effectiveTime">
                 Procedure observation performer MUST be vendor supplied.
             </sch:assert> 
-
+             
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.7']/cda:entry/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.52']/cda:consumable/cda:manufacturedProduct/cda:manufacturedMaterial/cda:code[@code='113']">
                 Immunization code MUST be 113.
             </sch:assert> 
-
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.7']/cda:entry/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.120']/cda:effectiveTime">
+                Immunization plan of treatment must contain an effectveTime when the immunization activity is intended to take place
+            </sch:assert>
         </sch:rule>
         
     </sch:pattern>

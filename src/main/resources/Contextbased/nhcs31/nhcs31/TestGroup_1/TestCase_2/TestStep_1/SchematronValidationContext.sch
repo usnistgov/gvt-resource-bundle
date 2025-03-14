@@ -72,9 +72,10 @@ queryBinding="xslt2"
             <sch:assert test="/cda:ClinicalDocument/cda:recordTarget/cda:patientRole/cda:patient/cda:administrativeGenderCode[@code = 'M']">
                 Patient administrativeGenderCode must be M.
             </sch:assert>
-            
-            
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.45'][cda:templateId/@extension='2019-08-01']/cda:value[@code = '446151000124109']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.200'][cda:templateId/@extension='2016-06-01']/cda:value[@code='M']">
+                Patient birth sex must be M.
+            </sch:assert>
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.45'][cda:templateId/@extension='2022-06-01']/cda:value[@code = '446151000124109']">
                 Patient gender identity must be 446151000124109.
             </sch:assert>
 
@@ -129,8 +130,8 @@ queryBinding="xslt2"
             
             <!-- Document header -->
             
-            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.1' and @extension='2019-08-01']">
-                Document templateId must be root = 2.16.840.1.113883.10.20.34.1.1 and extension= 2019-08-01.
+            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.1' and @extension='2022-01-01.3.1']">
+                Document templateId must be root = 2.16.840.1.113883.10.20.34.1.1 and extension= 2022-01-01.3.1.
             </sch:assert> 
             <sch:assert test="/cda:ClinicalDocument/cda:code[@code='75619-7']">
                 Document code must be 75619-7.
@@ -393,7 +394,7 @@ queryBinding="xslt2"
                 Procedure activity datetime must be vendor supplied.
             </sch:assert> 
             
-            <sch:assert test='/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root="2.16.840.1.113883.10.20.22.2.7.1"][cda:templateId/@extension="2014-06-09"]/cda:entry/cda:act[cda:templateId/@root="2.16.840.1.113883.10.20.22.4.12"][cda:templateId/@extension="2014-06-09"]//cda:observation[cda:templateId/@root="2.16.840.1.113883.10.20.22.4.19"][cda:templateId/@extension="2014-06-09"]/cda:value[@code="49727002"]'>
+            <sch:assert test='/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root="2.16.840.1.113883.10.20.22.2.7.1"][cda:templateId/@extension="2014-06-09"]/cda:entry/cda:act[cda:templateId/@root="2.16.840.1.113883.10.20.22.4.13"][cda:templateId/@extension="2014-06-09"]//cda:observation[cda:templateId/@root="2.16.840.1.113883.10.20.22.4.19"][cda:templateId/@extension="2014-06-09"]/cda:value[@code="49727002"]'>
                 Procedure activity indication must be 49727002.
             </sch:assert>
             
