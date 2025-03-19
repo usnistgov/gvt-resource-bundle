@@ -72,7 +72,7 @@ queryBinding="xslt2"
             </sch:assert>
            
             
-            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.45'][cda:templateId/@extension='2019-08-01']/cda:value[@code='446151000124109']">
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.16']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.45'][cda:templateId/@extension='2022-06-01']/cda:value[@code='446151000124109']">
                 Patient gender identity must be 446151000124109.
             </sch:assert>
 
@@ -122,8 +122,8 @@ queryBinding="xslt2"
                 Document legal authenticator signatureCode must be vendor supplied.
             </sch:assert>   
             -->
-            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.1' and @extension='2019-08-01']">
-                Document template ID must be 2.16.840.1.113883.10.20.34.1.1:2019-08-01.
+            <sch:assert test="/cda:ClinicalDocument/cda:templateId[@root='2.16.840.1.113883.10.20.34.1.3' and @extension='2022-01-01.3.1']">
+                Document template ID must be 2.16.840.1.113883.10.20.34.1.3:2022-01-01.3.1.
             </sch:assert>  
            
             <sch:assert test="/cda:ClinicalDocument/cda:documentationOf/cda:serviceEvent/cda:performer/cda:assignedEntity/cda:id[@extension = '9874563214']">
@@ -155,6 +155,10 @@ queryBinding="xslt2"
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.8'][cda:templateId/@extension='2019-08-01']/cda:entry/cda:encounter[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.10'][cda:templateId/@extension='2019-08-01']/cda:entryRelationship/cda:act[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.202'][cda:templateId/@extension='2016-11-01']/cda:text/cda:reference/@value">
                 Clinician Notes MUST be vendor supplied.
             </sch:assert>  
+            
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.14'][cda:templateId/@extension='2019-08-01']/cda:text">
+                A Chief Complaint and Reason For Visit section MUST exist.                
+            </sch:assert>
             
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section/cda:entry/cda:encounter[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.10'][cda:templateId/@extension='2019-08-01']/cda:entryRelationship/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.34.3.6'][cda:templateId/@extension='2019-08-01']/cda:value[@code = '38341003']">
                 Primary diagnosis must be 38341003.
@@ -569,7 +573,10 @@ queryBinding="xslt2"
                 Ordered immunization MUST be 121 
             </sch:assert>
            
-
+            <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.34.2.7']/cda:entry/cda:substanceAdministration[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.120']/cda:effectiveTime">
+                Ordered immunization MUST have an effectiveTime 30 days from site visit
+            </sch:assert>
+            
             <sch:assert test="/cda:ClinicalDocument/cda:component/cda:structuredBody/cda:component/cda:section[cda:templateId/@root='2.16.840.1.113883.10.20.22.2.17']/cda:entry/cda:observation[cda:templateId/@root='2.16.840.1.113883.10.20.22.4.78'][cda:templateId/@extension='2014-06-09']/cda:value[@code='8517006']">
                 Smoking status MUST be 8517006 
             </sch:assert>
