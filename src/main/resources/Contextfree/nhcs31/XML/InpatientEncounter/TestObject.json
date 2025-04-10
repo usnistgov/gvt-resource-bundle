@@ -6,6 +6,6 @@
   "id":"2",
   "xml": {
       "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
-      "schematronPathList": ["CDAR2_IG_NHCS_R1_D4_2019SEP.sch"]
+    "schematronPathList": [ "CDAR2_IG_NHCS_R1_STU3.1.sch" ]
   }
 }
