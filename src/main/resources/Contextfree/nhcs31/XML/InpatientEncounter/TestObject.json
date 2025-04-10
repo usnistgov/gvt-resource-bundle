@@ -3,7 +3,7 @@
   "description": "Inpatient Encounter Document.",
   "position": 2,
   "version":"1",
-  "id":"2",
+  "id":"22",
   "xml": {
       "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
       "schematronPathList": ["CDAR2_IG_NHCS_R1_D4_2019SEP.sch"]
