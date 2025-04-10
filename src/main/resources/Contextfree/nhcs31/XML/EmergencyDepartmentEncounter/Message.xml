@@ -23,9 +23,14 @@
     been modified in order to support context-based testing of the Emergency Department
     test care area as described in the National Health Care Surveys Release 1, STU
     Release 3 implementation guide.
+    
+    xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd"
+    C:\Users\amccaff\src\GitHub\gvt-resource-bundle\src\main\resources\Global\Schemas\nhcs31\infrastructure\cda
 -->
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
-<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="urn:hl7-org:v3 http://hit-dev-admin.nist.gov:11080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd"
+  xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
   <!-- 
       ******************************************************** 
       CDA HEADER 
@@ -36,9 +41,9 @@
   <!-- [C-CDA R2.1] US Realm Header (V3) -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
   <!-- [NHCS R1D4] National Health Care Surveys Document (V4) -->
-  <templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2019-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2022-01-01.3.1" />
   <!-- [NHCS R1D4] Emergency Department Encounter (NHCS-ED, NHAMCS-ED) (V5) requirements -->
-  <templateId root="2.16.840.1.113883.10.20.34.1.4" extension="2019-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.34.1.4" extension="2022-01-01.3.1" />
   <!-- ID shall be a globally unique identifier -->
   <id root="fc5a3b0c-e08b-45c2-8fc1-65046113e1d7" />
   <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="75619-7" displayName="National Ambulatory Medical Care Survey" />
@@ -73,7 +78,7 @@
           <given>Lilly</given>
           <given>Reagan</given>
           <family>Pearce</family>
-          <suffix></suffix>ss
+          <suffix></suffix>
         </name>
         <!-- Sex -->
         <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
@@ -122,7 +127,7 @@
         <id extension="99999999" root="2.16.840.1.113883.4.6" />
         <name>Good Health Hospital</name>
         <telecom value="tel:+15555555000" use="WP" />
-        <addr use="WP">` <streetAddressLine>1002 Healthcare Drive </streetAddressLine><city>Portland</city><state>OR</state><postalCode>99123</postalCode><country>US</country></addr>
+        <addr use="WP"><streetAddressLine>1002 Healthcare Drive </streetAddressLine><city>Portland</city><state>OR</state><postalCode>99123</postalCode><country>US</country></addr>
       </representedCustodianOrganization>
     </assignedCustodian>
   </custodian>
@@ -168,7 +173,10 @@
   <componentOf>
     <encompassingEncounter>
       <!-- Encounter Id -->
+      <!--
       <id root="57edf80c-7114-4dc3-b3f4-abf515d18c90" />
+      -->
+      <id extension="394857" />
       <code code="EMER" codeSystem="2.16.840.1.113883.5.4" displayName="Emergency" codeSystemName="ActCode" />
       <effectiveTime>
         <!-- Date/Time of admission/visit/arrival -->
@@ -178,6 +186,39 @@
       </effectiveTime>
       <!-- Discharge Disposition -->
       <dischargeDispositionCode code="09" displayName="Admitted as an inpatient to this hospital" codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition" />
+      <location>
+        <healthCareFacility>
+          <id extension="77777777777" root="2.16.840.1.113883.4.6" />
+          <!-- Facility location within larger healthcare organization e.g Kaiser Vacaville within Kaiser North-->
+          <location>
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </location>
+          <!--Facility contact information-->
+          <serviceProviderOrganization>
+            <id extension="77777777778" root="2.16.840.1.113883.4.6" />
+            <!-- Facility Name -->
+            <name>Good Health Hospital</name>
+            <!-- Facility Phone -->
+            <telecom use="WP" value="tel: 1+(555)-555-1212" />
+            <!-- Facility Fax -->
+            <telecom use="WP" value="fax: 1+(555)-555-3333" />
+            <!-- Facility Addr -->
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
     </encompassingEncounter>
   </componentOf>
   <!-- 
@@ -197,7 +238,7 @@
           <!-- [C-CDA R2] Social History Section (V2) -->
           <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
           <!-- [NHCS R1D4] Patient Information Section (V5) -->
-          <templateId root="2.16.840.1.113883.10.20.34.2.5" extension="2019-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.34.2.16" extension="2022-01-01" />
           <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History" />
           <title>Patient Information Section</title>
           <text>
@@ -209,10 +250,12 @@
             <!-- Gender Identity Observation-->
             <observation classCode="OBS" moodCode="EVN">
               <!-- [NHCS R1D2] Gender Identity Observation -->
-              <templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2019-04-01" />
+              <templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2022-06-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" />
               <id root="5501b49a-32ea-4c78-9c31-3dbe782871b7" />
               <code code="76691-5" displayName="Gender identity" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
               <statusCode code="completed" />
+              <effectiveTime><low value="20200101"/></effectiveTime>
               <value xsi:type="CD" code="446141000124107" displayName="Identifies as female gender (finding)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
             </observation>
           </entry>
@@ -336,7 +379,7 @@
                     <translation code="51848-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Evaluation Note" />
                   </code>
                   <text>
-                    <reference value="Patient was found face down in bathroom at her residence by her daughter. Daughter was unable to rouse her and called 911.  Paramedics noted respiratory despression and gave Naloxone." />
+                    <reference value="#EvaluationNote1" />
                   </text>
                   <statusCode code="completed" />
                   <!-- Clinically-relevant time of the note -->
@@ -392,7 +435,7 @@
           <!-- [C-CDA R2.1] Payers Section (V3) -->
           <templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01" />
           <!-- [NHCS R1D2] Payment Sources Section (V2) -->
-          <templateId root="2.16.840.1.113883.10.20.34.2.4" extension="2019-04-01" />
+          <templateId root="2.16.840.1.113883.10.20.34.2.4" extension="2022-01-01.3.1" />
           <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payers" />
           <title>Payment Sources Section</title>
           <text>
@@ -640,6 +683,11 @@
                   <td>Supplied</td>
                   <td>August 15, 2020</td>
                 </tr>
+                <tr>
+                  <td>Td (adult), adsorbed</td>
+                  <td>Ordered</td>
+                  <td>Aug 20 2021</td>
+                </tr>
               </tbody>
             </table>
           </text>
@@ -668,6 +716,30 @@
                   <manufacturerOrganization>
                     <name>Sanofi Pasteur (PMC)</name>
                   </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <!-- [C-CDA R2] Planned Immunization Activity -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.120" />
+              <id root="3111bdeb-9a26-4063-8974-d718045ebe51" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20210820" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <!-- [C-CDA R2] Immunization Medication Information (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <id root="e9089d80-0eca-4203-817a-11d5db14bb5f" />
+                  <manufacturedMaterial>
+                    <code code="09" displayName="Td (adult), adsorbed" codeSystem="2.16.840.1.113883.12.292" codeSystemName="CDC Vaccine Code (CVX)" />
+                    <!-- When recording Immunization Medication Information if the lot 
+                         number is not known, use lotNumberText/@nullFlavor="NA". -->
+                    <lotNumberText nullFlavor="NA" />
+                  </manufacturedMaterial>
                 </manufacturedProduct>
               </consumable>
             </substanceAdministration>

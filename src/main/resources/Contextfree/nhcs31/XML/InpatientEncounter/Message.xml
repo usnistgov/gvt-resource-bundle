@@ -27,7 +27,7 @@
     Note: There is a mismatch between the HL7 document code (NHCS_R1_D4) and the STU version (STU R3)
           - this was due to a numbering issue with one of the earlier STU updates.
 -->
-<ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+<ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 http://hit-dev-admin.nist.gov:11080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
 	<!--
     ********************************************************
     CDA HEADER
@@ -38,7 +38,7 @@
 	<!-- [C-CDA R2.1] US Realm Header (V3) -->
 	<templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01"/>
 	<!-- [NHCS R1D4] National Health Care Surveys Document (V4) -->
-	<templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2019-08-01"/>
+	<templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2022-01-01.3.1"/>
 	<!-- [NHCS R1D4] In-Patient Encounter (NHCS-IP) (V5) requirements -->
 	<templateId root="2.16.840.1.113883.10.20.34.1.2" extension="2019-08-01"/>
 	<!-- ID shall be a globally unique identifier -->
@@ -168,6 +168,39 @@
 			</effectiveTime>
 			<!-- Discharge Disposition -->
 			<dischargeDispositionCode code="03" displayName="Discharged/transferred to skilled nursing facility (SNF) with Medicare certification in anticipation of covered skilled care" codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition"/>
+			<location>
+				<healthCareFacility>
+					<id extension="77777777777" root="2.16.840.1.113883.4.6" />
+					<!-- Facility location within larger healthcare organization e.g Kaiser Vacaville within Kaiser North-->
+					<location>
+						<addr>
+							<streetAddressLine>1000 Hospital Lane</streetAddressLine>
+							<city>Ann Arbor</city>
+							<state>MI</state>
+							<postalCode>99999</postalCode>
+							<country>US</country>
+						</addr>
+					</location>
+					<!--Facility contact information-->
+					<serviceProviderOrganization>
+						<id extension="77777777778" root="2.16.840.1.113883.4.6" />
+						<!-- Facility Name -->
+						<name>Good Health Hospital</name>
+						<!-- Facility Phone -->
+						<telecom use="WP" value="tel: 1+(555)-555-1212" />
+						<!-- Facility Fax -->
+						<telecom use="WP" value="fax: 1+(555)-555-3333" />
+						<!-- Facility Addr -->
+						<addr>
+							<streetAddressLine>1000 Hospital Lane</streetAddressLine>
+							<city>Ann Arbor</city>
+							<state>MI</state>
+							<postalCode>99999</postalCode>
+							<country>US</country>
+						</addr>
+					</serviceProviderOrganization>
+				</healthCareFacility>
+			</location>
 		</encompassingEncounter>
 	</componentOf>
 	<!--
@@ -219,7 +252,7 @@
 							<!-- Conforms to Social History Observation (V3) -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01"/>
 							<!-- [NHCS R1D4] Gender Identity Observation (V2)-->
-							<templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2019-08-01"/>
+							<templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2022-06-01"/>
 							<id root="5501b49a-32ea-4c78-9c31-3dbe782871b7"/>
 							<code code="76691-5" displayName="Gender identity" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 							<statusCode code="completed"/>
@@ -237,7 +270,7 @@
 							<id root="5501b49a-32ea-4c78-9c31-3dbe782871b7"/>
 							<code code="76689-9" displayName="Sex Assigned At Birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 							<statusCode code="completed"/>
-							<value xsi:type="CD" code="F" displayName="Female" codeSystem="2.16.840.1.113883.5.1" codeSystemName="Administrative Gender"/>
+							<value xsi:type="CD" code="M" displayName="Male" codeSystem="2.16.840.1.113883.5.1" codeSystemName="Administrative Gender"/>
 						</observation>
 					</entry>
 					<entry>
@@ -937,7 +970,7 @@
 					</entry>
 					<entry>
 						<act classCode="ACT" moodCode="EVN">
-							<templateId root="2.16.840.1.113883.10.20.22.4.12" extension="2014-06-09"/>
+							<templateId root="2.16.840.1.113883.10.20.22.4.13" extension="2014-06-09"/>
 							<id root="1.2.3.4.5.6.7.8" extension="1234567"/>
 							<code code="274025005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Colonic polypectomy">
 								<originalText>
@@ -2393,7 +2426,7 @@
 										<observation classCode="OBS" moodCode="EVN">
 											<templateId root="2.16.840.1.113883.10.20.22.4.315" extension="2019-06-21"/>
 											<code code="C101672" displayName="Lot or Batch Number" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus"/>
-											<value xsi:type="ST">XYZ789</value>
+											<value xsi:type="ED">XYZ789</value>
 										</observation>
 									</component>
 									<component>

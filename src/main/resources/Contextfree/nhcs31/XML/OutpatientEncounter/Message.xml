@@ -27,7 +27,7 @@
     Note: There is a mismatch between the HL7 document code (NHCS_R1_D4) and the STU version (STU R3) 
           - this was due to a numbering issue with one of the earlier STU updates.
 -->
-<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd">
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 http://hit-dev-admin.nist.gov:11080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
   <!-- 
         ******************************************************** 
         CDA HEADER 
@@ -38,9 +38,9 @@
   <!-- [C-CDA R2.1] US Realm Header (V3) -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
   <!-- [NHCS R1D4] National Health Care Surveys Document (V4) -->
-  <templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2019-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2022-01-01.3.1" />
   <!-- [NHCS R1D4] Out-Patient Encounter (NHCS-OPD, NAMCS, NHAMCS-OPD) (V5) -->
-  <templateId root="2.16.840.1.113883.10.20.34.1.3" extension="2019-08-01" />
+  <templateId root="2.16.840.1.113883.10.20.34.1.3" extension="2022-01-01.3.1" />
   <!-- Id shall be a globally unique identifier -->
   <id root="fc5a3b0c-e08b-45c2-8fc1-65046113e1d7" />
   <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="75619-7" displayName="National Ambulatory Medical Care Survey" />
@@ -200,6 +200,39 @@
       </effectiveTime>
       <!-- Discharge Disposition -->
       <dischargeDispositionCode code="01" displayName="Discharged to home or self care (routine discharge)" codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition" />
+      <location>
+        <healthCareFacility>
+          <id extension="77777777777" root="2.16.840.1.113883.4.6" />
+          <!-- Facility location within larger healthcare organization e.g Kaiser Vacaville within Kaiser North-->
+          <location>
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </location>
+          <!--Facility contact information-->
+          <serviceProviderOrganization>
+            <id extension="77777777778" root="2.16.840.1.113883.4.6" />
+            <!-- Facility Name -->
+            <name>Good Health Hospital</name>
+            <!-- Facility Phone -->
+            <telecom use="WP" value="tel: 1+(555)-555-1212" />
+            <!-- Facility Fax -->
+            <telecom use="WP" value="fax: 1+(555)-555-3333" />
+            <!-- Facility Addr -->
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
     </encompassingEncounter>
   </componentOf>
   <!-- 
@@ -219,7 +252,7 @@
           <!-- [C-CDA R2] Social History Section (V3) -->
           <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
           <!-- [NHCS R1D4] Social History Section (NHCS) -->
-          <templateId root="2.16.840.1.113883.10.20.34.2.16" extension="2019-08-01" />
+          <templateId root="2.16.840.1.113883.10.20.34.2.16" extension="2022-06-01" />
           <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History" codeSystemName="LOINC" />
           <title>Social History Section (NHCS)</title>
           <text>
@@ -248,7 +281,7 @@
               <!-- Conforms to Social History Observation (V3) -->
               <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" />
               <!-- [NHCS R1D4] Gender Identity Observation (V2) -->
-              <templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2019-08-01" />
+              <templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2022-06-01" />
               <id root="5501b49a-32ea-4c78-9c31-3dbe782871b7" />
               <code code="76691-5" displayName="Gender identity" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
               <statusCode code="completed" />
@@ -296,7 +329,7 @@
           <!-- [C-CDA R2.1] Payers Section (V3) -->
           <templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01" />
           <!-- [NHCS R1D2] Payment Sources Section (V2) -->
-          <templateId root="2.16.840.1.113883.10.20.34.2.4" extension="2019-04-01" />
+          <templateId root="2.16.840.1.113883.10.20.34.2.4" extension="2022-01-01.3.1" />
           <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payers" />
           <title>Payment Sources Section</title>
           <text>
@@ -526,7 +559,7 @@
           <!-- [C-CDA R1.1] Chief Complaint and Reason for Visit Section -->
           <templateId root="2.16.840.1.113883.10.20.22.2.13" />
           <!-- [NHCS R1D4] Chief Complaint and Reason for Visit Section with NullFlavor (V4) -->
-          <templateId root="2.16.840.1.113883.10.20.34.2.14" extension="2019-04-01" />
+          <templateId root="2.16.840.1.113883.10.20.34.2.14" extension="2019-08-01" />
           <code code="46239-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chief Complaint and Reason for Visit" />
           <title>Chief Complaint and Reason for Visit</title>
           <text>
@@ -642,7 +675,7 @@
                     <translation code="51848-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Evaluation Note" />
                   </code>
                   <text>
-                    <reference value="82 ys old Caucasian male obese former smoker with a long history of hypertension, hyperlipidemia, Type II diabetes with mild renal insufficiency and peripheral neuropathy. Mild CHF for the past 10 years.  The hypertension was previously controlled with Lisinopril 10 mg daily.  At the last visit, 3 weeks ago, the BP was 158/89. The dose of lisinopril was increased from 10 mg to 20 mg/day." />
+                    <reference value="#EvaluationNote1" />
                   </text>
                   <statusCode code="completed" />
                   <!-- Clinically-relevant time of the note -->
@@ -1913,7 +1946,7 @@
                     <observation classCode="OBS" moodCode="EVN">
                       <templateId root="2.16.840.1.113883.10.20.22.4.315" extension="2019-06-21" />
                       <code code="C101672" displayName="Lot or Batch Number" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
-                      <value xsi:type="ST">VENDOR SUPPLIED</value>
+                      <value xsi:type="ED">VENDOR SUPPLIED</value>
                     </observation>
                   </component>
                   <component>
