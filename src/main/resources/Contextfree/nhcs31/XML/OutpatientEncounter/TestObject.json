@@ -3,7 +3,7 @@
   "description": "Outpatient Encounter Document.",
   "position": 3,
   "version":"1",
-  "id":"3",
+  "id":"23",
   "xml": {
       "schemaPathList": ["infrastructure/cda/CDA_SDTC.xsd"],
       "schematronPathList": ["CDAR2_IG_NHCS_R1_STU3.1.sch"]

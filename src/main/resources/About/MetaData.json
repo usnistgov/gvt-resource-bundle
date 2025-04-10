@@ -1,39 +1,47 @@
 	{
-  "domains": [
-		{
-			"key": "default",
-			"position": 1,
-			"rsbVersion"	:"${project.version}-${ts}",
-	    		"version"		: "${metadata.version}",
-	    		"igVersion"		:"",
-	    		"scope": "GLOBAL",
-			"name": "NIST Home",
-			"homeTitle": "Welcome to the NIST General Validation Tool",
-			"authorUsername":"nico"
- 		},
- 		{
-			"key": "nhcs30",
-			"position": 2,
-			"rsbVersion"	:"${project.version}-${ts}",
-	    		"version"		: "${metadata.version}",
-	    		"igVersion"		:"",
-	    		"scope": "GLOBAL",
-			"name": "NHCS CDA Release 3",
-			"homeTitle": "NHCS CDA Release 3 Validation Testing",
-			"authorUsername":"nico"
- 		},
-		{
+		"domains": [
+			{
+				"key": "default",
+				"position": 1,
+				"rsbVersion": "${project.version}-${ts}",
+				"version": "${metadata.version}",
+				"igVersion": "",
+				"scope": "GLOBAL",
+				"name": "NIST Home",
+				"homeTitle": "Welcome to the NIST General Validation Tool",
+				"authorUsername": "nico",
+				"options":{
+					"REPORT_SAVING_SUPPORTED": false
+				}
+			},
+			{
+				"key": "nhcs30",
+				"position": 2,
+				"rsbVersion": "${project.version}-${ts}",
+				"version": "${metadata.version}",
+				"igVersion": "",
+				"scope": "GLOBAL",
+				"name": "NHCS CDA Release 3",
+				"homeTitle": "NHCS CDA Release 3 Validation Testing",
+				"authorUsername": "nico",
+				"options":{
+					"REPORT_SAVING_SUPPORTED": false
+				}
+			},
+			{
 			"key": "nhcs31",
 			"position": 3,
 			"rsbVersion"	:"${project.version}-${ts}",
-	    		"version"		: "${metadata.version}",
-	    		"igVersion"		:"",
-	    		"scope": "GLOBAL",
+    		"version"		: "${metadata.version}",
+    		"igVersion"		:"",
+    		"scope": "GLOBAL",
 			"name": "NHCS CDA Release 3.1",
 			"homeTitle": "NHCS CDA Release 3.1 Validation Testing",
-			"authorUsername":"mccaffrey"
+			"authorUsername":"nico",
+			"options":{
+					"REPORT_SAVING_SUPPORTED": false
+			}
  		}
- 	
-	]
-}
-
+			
+		]
+	}
