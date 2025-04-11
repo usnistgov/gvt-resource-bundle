@@ -5,7 +5,7 @@ xmlns:sch="http://www.ascc.net/xml/schematron"
 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
 
 --> 
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+<sch:schema xmlns:sch="http://www.ascc.net/xml/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process">
     <sch:ns prefix="cda" uri="urn:hl7-org:v3" />
     <sch:phase id="errors">
