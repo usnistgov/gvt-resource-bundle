@@ -1,22 +1,47 @@
-[{
-	"title": "GVT 1.0.1",
-	"link": "https://hit-2015.nist.gov/wars/gvt-1_0_1.zip",
-	"date": "2022/04/22",
-	"customizable": true,
-	"order":0
+[
+{
+    "title":"Installation Guide",
+    "name" :"README.md",
+    "path":"docker/README.md",
+    "type":"docker",
+    "position": 1
 },
 {
-	"title": "GVT 1.0.2",
-	"link": "https://hit-2015.nist.gov/wars/gvt-1_0_2.zip",
-	"date": "2022/08/30",
-	"customizable": true,
-	"order":1
+    "title":"Application Configuration File",
+    "name" :"app-config.properties",
+    "path":"docker/app-config.properties",
+    "type":"docker",
+    "position": 2
+},
+{
+    "title":"Docker Compose File",
+    "name" :"docker-compose.yml",
+    "path":"docker/docker-compose.yml",
+    "type":"docker",
+    "position": 3
 },
 {
 	"title": "GVT 1.2.0",
 	"link": "https://hit-2015.nist.gov/wars/gvt-1_2_0.zip",
 	"date": "2023/03/03",
-	"customizable": true,
-	"order":2
+	"type":"war",
+	"customizable": true
+},
+{
+	"title": "GVT 1.0.2",
+	"link": "https://hit-2015.nist.gov/wars/gvt-1_0_2.zip",
+	"date": "2022/08/30",
+	"type":"war",
+	"customizable": true
+},
+{
+	"title": "GVT 1.0.1",
+	"link": "https://hit-2015.nist.gov/wars/gvt-1_0_1.zip",
+	"date": "2022/04/22",
+	"type":"war",
+	"customizable": true
 }
+
+
+
 ]
