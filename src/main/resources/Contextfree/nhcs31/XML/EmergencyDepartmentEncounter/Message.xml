@@ -14,22 +14,19 @@
 -->
 <!--
     Title: NHCS Emergency Department Encounter Sample File
-    File Name: Sample_NHCS_3_ED1.xml
     Created by: Lantana Consulting Group, LLC
     Modified by: CDC and NIST
     
     Description: This document conforms to the HL7 CDA® R2 Implementation Guide: 
-    National Health Care Surveys Release 1, STU Release 3 - US Realm.  This file has
+    National Health Care Surveys Release 1, STU Release 3.1 - US Realm.  This file has
     been modified in order to support context-based testing of the Emergency Department
     test care area as described in the National Health Care Surveys Release 1, STU
-    Release 3 implementation guide.
-    
-    xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd"
-    C:\Users\amccaff\src\GitHub\gvt-resource-bundle\src\main\resources\Global\Schemas\nhcs31\infrastructure\cda
+    Release 3.1 implementation guide.
+
 -->
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xsi:schemaLocation="urn:hl7-org:v3 http://hit-dev-admin.nist.gov:11080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd"
+  xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd"
   xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
   <!-- 
       ******************************************************** 
