@@ -1,0 +1,12 @@
+{
+  "version": " Version 1.0.0",
+  "igVersion": "2020",
+  "name": "/CDC NHCS 3.1 CDA Test Tool",
+  "rsbVersion": "1.0.0",
+  "domain": "NIST/CDC NHCS Version 3.1 CDA Validation tool",
+  "adminEmail": "andrew.mccaffrey@nist.gov",
+  "description": "(CDA)",
+  "header": "NHCS CDA Tool @ NIST",
+  "homeTitle": "Welcome to the NIST/CDC NHCS Version 3.1 CDA Validation Suite",
+  "homeContent": "<p>This version of the tool is used to test the HL7 CDA® R2 Implementation Guide:National Health Care Surveys Version 3.1.</p><p>This version currently supports:<ul><li>CDC CDA XML</li></ul></p><p style='color:red'>The following browsers are supported: Internet Explorer versions 8 and 9, Firefox, and Chrome. Recommended browsers are Internet Explorer 9, Firefox and Chrome.</p>"
+}

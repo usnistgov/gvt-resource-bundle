@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+      ******************************************************** 
+      Disclaimer: 
+      This sample file contains representative data elements from the three
+      National Health Care Surveys conducted by the CDC NCHS. 
+      The file depicts a fictional character's health data. Any resemblance to 
+      a real person is coincidental. To illustrate as many data elements as possible, 
+      the clinical scenario may not be entirely plausible. The data in this sample 
+      file is not intended to represent a real patients, people or clinical events. 
+      This sample is designed to be used in conjunction with the Emergency
+      Department Encounter of the National Health Care Surveys IG.
+      ******************************************************** 
+-->
+<!--
+    Title: NHCS Emergency Department Encounter Sample File
+    Created by: Lantana Consulting Group, LLC
+    Modified by: CDC and NIST
+    
+    Description: This document conforms to the HL7 CDA® R2 Implementation Guide: 
+    National Health Care Surveys Release 1, STU Release 3.1 - US Realm.  This file has
+    been modified in order to support context-based testing of the Emergency Department
+    test care area as described in the National Health Care Surveys Release 1, STU
+    Release 3.1 implementation guide.
+    
+ -->
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="urn:hl7-org:v3 CDA_SDTC.xsd"
+  xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+  <!-- 
+      ******************************************************** 
+      CDA HEADER 
+      ******************************************************** 
+      -->
+  <realmCode code="US" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <!-- [C-CDA R2.1] US Realm Header (V3) -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <!-- [NHCS R1D4] National Health Care Surveys Document (V4) -->
+  <templateId root="2.16.840.1.113883.10.20.34.1.1" extension="2022-01-01.3.1" />
+  <!-- [NHCS R1D4] Emergency Department Encounter (NHCS-ED, NHAMCS-ED) (V5) requirements -->
+  <templateId root="2.16.840.1.113883.10.20.34.1.4" extension="2022-01-01.3.1" />
+  <!-- ID shall be a globally unique identifier -->
+  <id root="fc5a3b0c-e08b-45c2-8fc1-65046113e1d7" />
+  <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="75619-7" displayName="National Ambulatory Medical Care Survey" />
+  <title>National Ambulatory Medical Care Survey: Emergency Department Encounter (NHCS-ED, NHAMCS-ED) (V2)</title>
+  <effectiveTime value="202008150000-0400" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <languageCode code="en-US" />
+  <!-- Document version tracking (use setId and versionNumber) -->
+  <setId root="51c6aba8-82bb-42ff-a23c-b62740e412e1" />
+  <versionNumber value="1" />
+  <recordTarget>
+    <patientRole>
+      <!-- The extension is patient-specific whereas the root is organization-specific. -->
+      <!-- Patient Medical Record Number -->
+      <id root="2.16.840.1.113883.3.3288.1000" extension="830126492" />
+      <!-- Patient's Medicare HIC Number -->
+      <id root="2.16.840.1.113883.4.572" extension="2DF6TH5NZ22"></id>
+      <!-- Patient's SSN Number -->
+      <id root="2.16.840.1.113883.4.1" extension="772-89-6926" />
+      <!-- Addr HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+      <addr use="H">
+        <streetAddressLine>75755 Shopko Court</streetAddressLine>
+        <city>Washington</city>
+        <state>DC</state>
+        <!-- ZIP Code -->
+        <postalCode>20078</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="MC" value="6665554444" />
+      <patient>
+        <name>
+          <given>Lilly</given>
+          <given>Reagan</given>
+          <family>Pearce</family>
+          <suffix></suffix>
+        </name>
+        <!-- Sex -->
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
+        <!-- Date of Birth -->
+        <birthTime value="19820309" />
+        <!--        <birthTime value="07061968" />-->
+        <!-- Patient Marital Status -->
+        <maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus" />
+        <!-- Race -->
+        <raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC" />
+        <!-- Ethnicity -->
+        <ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC" />
+        <!-- Use languageCommunication/languageCode/@nullFlavor="NA" as 
+          shown below -->
+        <languageCommunication>
+          <languageCode code="sp"></languageCode>
+          <proficiencyLevelCode code="E" displayName="Excellent" codeSystem="2.16.840.1.113883.5.61" codeSystemName="HL7LanguageAbilityProficiency" />
+          <preferenceInd value="true" />
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <!--TRUE-->
+  <author>
+    <time value="20050329224411+0500" />
+    <assignedAuthor>
+      <id extension="99999999" root="2.16.840.1.113883.4.6" />
+      <code code="208M00000X" displayName="Hospitalist" codeSystem="2.16.840.1.114222.4.11.1066" codeSystemName="Healthcare Provider Taxonomy" />
+      <addr use="WP">
+        <streetAddressLine>1002 Healthcare Drive </streetAddressLine>
+        <city>Portland</city>
+        <state>OR</state>
+        <postalCode>99123</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:5555551002" />
+      <assignedPerson>
+        <name>Dr. Physician</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <!-- Custodian will be Provider Organization -->
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="99999999" root="2.16.840.1.113883.4.6" />
+        <name>Good Health Hospital</name>
+        <telecom value="tel:+15555555000" use="WP" />
+        <addr use="WP"><streetAddressLine>1002 Healthcare Drive </streetAddressLine><city>Portland</city><state>OR</state><postalCode>99123</postalCode><country>US</country></addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <documentationOf typeCode="DOC">
+    <serviceEvent classCode="PCPR">
+      <effectiveTime>
+        <low value="202008151025" />
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <!-- Date time of provider contact -->
+        <time>
+          <low value="202008151030" />
+        </time>
+        <assignedEntity>
+          <!-- Provider's NPI -->
+          <id root="2.16.840.1.113883.4.6" extension="3235467442" />
+          <!-- Provider -->
+          <code code="207P00000X" displayName="Emergency medicine Physician" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy" />
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <!-- Date time of provider contact -->
+        <time>
+          <low value="202008151045" />
+        </time>
+        <assignedEntity>
+          <!-- Provider's NPI -->
+          <id root="2.16.840.1.113883.4.6" extension="22222222" />
+          <!-- Providers (seen at this visit) -->
+          <code code="163W00000X" displayName="Registered Nurse" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy" />
+        </assignedEntity>
+      </performer>
+      <performer typeCode="PRF">
+        <!-- Patient's Primary Care Physician -->
+        <functionCode code="104100000X" displayName="Social Worker" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy" />
+        <assignedEntity>
+          <!-- Provider's NPI -->
+          <id root="2.16.840.1.113883.4.6" extension="11111111" />
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <!-- Encounter Id -->
+      <!--
+      <id root="57edf80c-7114-4dc3-b3f4-abf515d18c90" />
+      -->
+      <id extension="394857" />
+      <code code="EMER" codeSystem="2.16.840.1.113883.5.4" displayName="Emergency" codeSystemName="ActCode" />
+      <effectiveTime>
+        <!-- Date/Time of admission/visit/arrival -->
+        <low value="202008150730" />
+        <!-- Date/Time of departure/discharge -->
+        <high value="202008160920" />
+      </effectiveTime>
+      <!-- Discharge Disposition -->
+      <dischargeDispositionCode code="09" displayName="Admitted as an inpatient to this hospital" codeSystem="2.16.840.1.113883.12.112" codeSystemName="HL7 Discharge Disposition" />
+      <location>
+        <healthCareFacility>
+          <id extension="77777777777" root="2.16.840.1.113883.4.6" />
+          <!-- Facility location within larger healthcare organization e.g Kaiser Vacaville within Kaiser North-->
+          <location>
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </location>
+          <!--Facility contact information-->
+          <serviceProviderOrganization>
+            <id extension="77777777778" root="2.16.840.1.113883.4.6" />
+            <!-- Facility Name -->
+            <name>Good Health Hospital</name>
+            <!-- Facility Phone -->
+            <telecom use="WP" value="tel: 1+(555)-555-1212" />
+            <!-- Facility Fax -->
+            <telecom use="WP" value="fax: 1+(555)-555-3333" />
+            <!-- Facility Addr -->
+            <addr>
+              <streetAddressLine>1000 Hospital Lane</streetAddressLine>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postalCode>99999</postalCode>
+              <country>US</country>
+            </addr>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <!-- 
+ ******************************************************** 
+ CDA BODY 
+ ******************************************************** 
+ -->
+  <component>
+    <structuredBody>
+      <!-- 
+      ******************************************************** 
+      Patient Information Section (V5)
+      ******************************************************** 
+      -->
+      <component>
+        <section>
+          <!-- [C-CDA R2] Social History Section (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
+          <!-- [NHCS R1D4] Patient Information Section (V5) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.16" extension="2022-01-01" />
+          <code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History" />
+          <title>Patient Information Section</title>
+          <text>
+            <list>
+              <item>Gender identity<list><item>Identifies as female gender</item></list><list><item>Smoking Status<list><item>Smoker, current status unknown</item></list></item></list><list><item>Birth Sex<list><item>Female</item></list></item></list></item>
+            </list>
+          </text>
+          <entry>
+            <!-- Gender Identity Observation-->
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- [NHCS R1D2] Gender Identity Observation -->
+              <templateId root="2.16.840.1.113883.10.20.34.3.45" extension="2022-06-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.38" extension="2015-08-01" />
+              <id root="5501b49a-32ea-4c78-9c31-3dbe782871b7" />
+              <code code="76691-5" displayName="Gender identity" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+              <statusCode code="completed" />
+              <effectiveTime><low value="20200101"/></effectiveTime>
+              <value xsi:type="CD" code="446141000124107" displayName="Identifies as female gender (finding)" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+            </observation>
+          </entry>
+          <entry>
+            <!-- Birth Sex Observation -->
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- [C-CDA 2.1] Birth Sex Observation -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.200" extension="2016-06-01" />
+              <id root="5501b49a-32ea-4c78-9c31-3dbe782871b7" />
+              <code code="76689-9" displayName="Sex Assigned At Birth" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+              <statusCode code="completed" />
+              <value xsi:type="CD" code="F" displayName="Female" codeSystem="2.16.840.1.113883.5.1" codeSystemName="Administrative Gender" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- [C-CDA R2] Smoking Status - Meaningful Use (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.78" extension="2014-06-09" />
+              <id extension="123456789" root="2.16.840.1.113883.19" />
+              <code code="72166-2" codeSystem="2.16.840.1.113883.6.1" displayName="Tobacco smoking status NHIS" />
+              <statusCode code="completed" />
+              <!-- The effectiveTime reflects when the current smoking status was observed. -->
+              <effectiveTime value="20120910" />
+              <!-- The value represents the patient's smoking status currently observed. -->
+              <value xsi:type="CD" code="77176002" displayName="Smoker, current status unknown" codeSystem="2.16.840.1.113883.6.96" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+      ******************************************************** 
+      Emergency Department Encounters Section (V3)
+      ******************************************************** 
+      -->
+      <component>
+        <section>
+          <!-- [C-CDA R2] Encounters Section (entries optional) (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2014-06-09" />
+          <!-- [NHCS R1D4] Emergency Department Encounters Section (V4) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.13" extension="2019-08-01" />
+          <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+          <title>Emergency Department Encounters</title>
+          <text>
+            <list>
+              <item>Current Visit<list><item>Emergency department visit</item></list></item>
+            </list>
+            <list>
+              <item>Primary Diagnosis <list><item>Poisoning caused by opiate analgesic drug</item></list></item>
+              <item>Encounter Diagnosis<list><item>Dependent drug abuse (disorder)</item></list></item>
+            </list>
+            <list>
+              <item>Clinical Note<list><item><content ID="EvaluationNote1">Text of an Evaluation note.</content></item></list></item>
+            </list>
+          </text>
+          <!-- Current Emergency Department Visit (V3) -->
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <!-- [C-CDA R2] Encounter Activity (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2015-08-01" />
+              <!-- [NHCS R1D4] Current Emergency Department Visit (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.34.3.40" extension="2019-08-01" />
+              <!-- This id is the same as the encompassingEncounter id -->
+              <id root="57edf80c-7114-4dc3-b3f4-abf515d18c90" />
+              <code code="EMER" codeSystem="2.16.840.1.113883.5.4" displayName="Emergency" codeSystemName="ActCode" />
+              <effectiveTime>
+                <!-- Date of Visit -->
+                <low value="20200815" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <!-- This observation represents the primary diagnosis -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2.1] Problem Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <!-- [NHCS R1D3] Primary Diagnosis Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.34.3.6" extension="2019-08-01" />
+                  <id root="7d49bb4a-4764-4126-82dd-dcfe7901f701" />
+                  <code code="18630-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Primary Diagnosis" />
+                  <!-- The statusCode reflects the status of the observation itself -->
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <!-- The low value reflects the date of onset -->
+                    <low value="20200815" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="241749009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Poisoning caused by opiate analgesic drug (disorder)">
+                    <translation code="T40.2X1a" codeSystem="2.16.840.1.113883.3.567.12.5" displayName="Poisoning by other Opioids" />
+                  </value>
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="REFR">
+                <!-- This act represents an encounter diagnosis -->
+                <act classCode="ACT" moodCode="EVN">
+                  <!-- [C-CDA R2.1] Encounter Diagnosis (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.80" extension="2015-08-01" />
+                  <code code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis" />
+                  <entryRelationship typeCode="SUBJ">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <!-- [C-CDA R2.1] Problem Observation (V3) -->
+                      <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                      <id root="7d49bb4a-4764-4126-82dd-dcfe7901f701" />
+                      <code code="282291009" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                        <translation code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis" />
+                      </code>
+                      <!-- The statusCode reflects the status of the observation itself -->
+                      <statusCode code="completed" />
+                      <effectiveTime>
+                        <!-- The low value reflects the date of onset -->
+                        <low value="20200815" />
+                      </effectiveTime>
+                      <value xsi:type="CD" code="6525002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Dependent drug abuse (disorder)" />
+                    </observation>
+                  </entryRelationship>
+                </act>
+              </entryRelationship>
+              <!-- Clinician notes -->
+              <entryRelationship typeCode="REFR">
+                <!-- Not a CDA document so use Notes C-CDA Companion Guide Note Activity template -->
+                <act classCode="ACT" moodCode="EVN">
+                  <!-- [C-CDA COMP 2.1] Note Activity -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.202" extension="2016-11-01" />
+                  <code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note">
+                    <translation code="51848-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Evaluation Note" />
+                  </code>
+                  <text>
+                    <reference value="#EvaluationNote1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <!-- Clinically-relevant time of the note -->
+                  <effectiveTime value="20200815" />
+                  <!-- Author Participation -->
+                  <author>
+                    <!-- [C-CDA R2] Author Participation -->
+                    <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                    <!-- Time note was actually written -->
+                    <time value="20200816083215-0500" />
+                    <assignedAuthor>
+                      <id root="20cf14fb-b65c-4c8c-a54d-b0cca834c18c" />
+                      <assignedPerson>
+                        <name>Dr. Physician</name>
+                      </assignedPerson>
+                    </assignedAuthor>
+                  </author>
+                  <reference typeCode="REFR">
+                    <externalDocument classCode="DOC" moodCode="EVN">
+                      <id root="10021d19-5b29-4771-bce4-236109943dd4" />
+                      <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="51848-0" displayName="Evaluation Note" />
+                      <!-- The media type is pdf -->
+                      <text mediaType="application/pdf">
+                        <reference value="EvaluationNote_10021d19-5b29-4771-bce4-236109943dd4.pdf" />
+                      </text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </entryRelationship>
+              <!-- External Document Reference -->
+              <reference typeCode="REFR">
+                <!-- This is a reference to a CDA document so classCode="DOCCLIN" -->
+                <externalDocument classCode="DOCCLIN" moodCode="EVN">
+                  <!-- [C-CDA R2.1] External Document Reference -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.115" extension="2014-0609" />
+                  <id root="6f1bd58b-c58f-40b7-b314-caf1294ed98b" />
+                  <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="10164-2" displayName="History of Present Illness Narrative" />
+                  <setId extension="sTT988" root="2.16.840.1.113883.19.5.99999.19" />
+                  <versionNumber value="1" />
+                </externalDocument>
+              </reference>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+      ******************************************************** 
+      Payment Sources Section (V2) 
+      ******************************************************** 
+      -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.1] Payers Section (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.18" extension="2015-08-01" />
+          <!-- [NHCS R1D2] Payment Sources Section (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.4" extension="2022-01-01.3.1" />
+          <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payers" />
+          <title>Payment Sources Section</title>
+          <text>
+            <table border="1" width="25%">
+              <thead>
+                <tr>
+                  <th>Expected Source(s) of Payment for this Visit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Medicare</td>
+                </tr>
+                <tr>
+                  <td>Medicaid</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <!-- Expected source of payment for this visit -->
+            <act classCode="ACT" moodCode="INT">
+              <!-- [C-CDA R2] Planned Coverage -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.129" />
+              <id root="2664987e-bd76-4e96-9cbf-5a09b7c6e228" />
+              <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payment Sources" />
+              <statusCode code="active" />
+              <entryRelationship typeCode="COMP">
+                <act classCode="ACT" moodCode="INT">
+                  <!-- These act/identifiers are unique identifiers for the policy 
+                          or program providing the coverage. -->
+                  <id nullFlavor="NI" />
+                  <code code="22" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology" displayName="Medicaid (Non-managed Care Plan)" />
+                  <statusCode code="active" />
+                </act>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <!-- Expected source of payment for this visit -->
+            <act classCode="ACT" moodCode="INT">
+              <!-- [C-CDA R2] Planned Coverage -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.129" />
+              <id root="ed688135-90dc-4507-86ff-d35fd1e43b62" />
+              <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Payment Sources" />
+              <statusCode code="active" />
+              <entryRelationship typeCode="COMP">
+                <act classCode="ACT" moodCode="INT">
+                  <!-- These act/identifiers are unique identifiers for the policy 
+                     or program providing the coverage. -->
+                  <id nullFlavor="NI" />
+                  <code code="2" codeSystem="2.16.840.1.113883.3.221.5" codeSystemName="Source of Payment Typology" displayName="Medicaid" />
+                  <statusCode code="active" />
+                </act>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+      ******************************************************** 
+      Chief Complaint and Reason for Visit Section with NullFlavor (V3)
+      ******************************************************** 
+      -->
+      <component>
+        <section>
+          <!-- [C-CDA R1.1] Chief Complaint and Reason for Visit Section -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.13" />
+          <!-- [NHCS R1D4] Chief Complaint and Reason for Visit Section with NullFlavor (V4) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.14" extension="2019-08-01" />
+          <code code="46239-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chief Complaint and Reason for Visit" />
+          <title>Chief Complaint and Reason for Visit</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Patient's Reason for Visit (Chief Complaint)</th>
+                  <th>Providers Reason for Visit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I passed out</td>
+                  <td>Suspect opioid overdose</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+        </section>
+      </component>
+      <!-- 
+          ******************************************************** 
+          Medications Section (V2)
+          ******************************************************** 
+          -->
+      <component>
+        <section>
+          <!-- [C-CDA R2] Medications Section (entries optional) (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.1" extension="2014-06-09" />
+          <!-- [NHCS R1D2] Medications Section (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.1" extension="2019-04-01" />
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE" />
+          <title>Medications</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Administered/Supplied OR Ordered</th>
+                  <th>Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Naloxone IV 10ml/hr</td>
+                  <td>Supplied</td>
+                  <td>Aug 15, 2020</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <!-- [C-CDA R2] Medication Activity (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20200815" />
+                <high value="20200815" />
+              </effectiveTime>
+              <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="FDA RouteOfAdministration" displayName="INTRAVENOUS" />
+              <approachSiteCode code="368208006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Left upper arm"></approachSiteCode>
+              <doseQuantity value=".5" unit="mg/hr" />
+              <rateQuantity value="10" unit="ml/hr" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <!-- [C-CDA R2] Medication Information (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" />
+                  <manufacturedMaterial>
+                    <code code="7242" displayName="Naloxone" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+          ******************************************************** 
+          Discharge Medications Section (entries required) (V3)
+          ******************************************************** 
+          -->
+      <component>
+        <section>
+          <!-- [C-CDA R2] Discharge Medications Section (entries optional) (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.11" extension="2015-08-01" />
+          <!-- [C-CDA R2] Discharge Medications Section (entries required) (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.11.1" extension="2015-08-01" />
+          <id root="15C34E56-00D6-11E6-B041-0050568B000B" />
+          <code code="10183-2" displayName="HOSPITAL DISCHARGE MEDICATIONS" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+            <translation code="75311-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge Medications" />
+          </code>
+          <title>Medications at Time of Discharge</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Administered/Supplied OR Ordered</th>
+                  <th>Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>sertraline 100mg one tab once per day</td>
+                  <td>Supplied</td>
+                  <td>Aug 20, 2020</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <!-- [C-CDA R2.1] Discharge Medication (V3)  -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.35" extension="2016-03-01" />
+              <code code="10183-2" displayName="Hospital discharge medication" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                <translation code="75311-1" displayName="Discharge medication" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+              </code>
+              <statusCode code="completed" />
+              <entryRelationship typeCode="SUBJ">
+                <substanceAdministration classCode="SBADM" moodCode="EVN">
+                  <!-- [C-CDA R2] Medication Activity (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+                  <id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" />
+                  <statusCode code="active" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <low value="20200816" />
+                    <high value="20200916" />
+                  </effectiveTime>
+                  <routeCode code="C38288" displayName="Oral" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
+                  <doseQuantity value="1" unit="tab" />
+                  <consumable>
+                    <manufacturedProduct classCode="MANU">
+                      <!-- [C-CDA R2] Medication Information (V2) -->
+                      <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                      <id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" />
+                      <manufacturedMaterial>
+                        <code code="312938" displayName="sertraline 100mg one tab once per day" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </consumable>
+                </substanceAdministration>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <!--
+          ******************************************************** 
+          Immunizations Section (V2)
+          ******************************************************** 
+        -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.1] Immunizations Section (entries optional) (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.2" extension="2015-08-01" />
+          <!--[NHCS R1D2] Immunizations Section (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.34.2.7" extension="2019-04-01" />
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Immunizations" />
+          <title>Immunizations</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Immunization</th>
+                  <th>Administered/Supplied OR Ordered</th>
+                  <th>Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed</td>
+                  <td>Supplied</td>
+                  <td>August 15, 2020</td>
+                </tr>
+                <tr>
+                  <td>Td (adult), adsorbed</td>
+                  <td>Ordered</td>
+                  <td>Aug 20 2021</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <!-- [C-CDA R2.1] Immunization Activity (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.52" extension="2015-08-01" />
+              <id root="abe7d60e-942e-476f-ba88-41ebed6fa4fe" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20200815" />
+              </effectiveTime>
+              <routeCode code="C28161" displayName="Intramuscular injection" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="National Cancer Institute (NCI) Thesaurus" />
+              <doseQuantity value=".5" unit="ml" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <!-- [C-CDA R2] Immunization Medication Information (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <id root="c9408400-3e8b-47a2-9055-9f938a17cc60" />
+                  <manufacturedMaterial>
+                    <code code="113" displayName="Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed" codeSystem="2.16.840.1.113883.12.292" codeSystemName="CDC Vaccine Code (CVX)" />
+                    <!-- When recording Immunization Medication Information if the lot 
+                         number is not known, use lotNumberText/@nullFlavor="NA". -->
+                    <lotNumberText>F13288C12</lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>Sanofi Pasteur (PMC)</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <!-- [C-CDA R2] Planned Immunization Activity -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.120" />
+              <id root="3111bdeb-9a26-4063-8974-d718045ebe51" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20210820" />
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <!-- [C-CDA R2] Immunization Medication Information (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54" extension="2014-06-09" />
+                  <id root="e9089d80-0eca-4203-817a-11d5db14bb5f" />
+                  <manufacturedMaterial>
+                    <code code="09" displayName="Td (adult), adsorbed" codeSystem="2.16.840.1.113883.12.292" codeSystemName="CDC Vaccine Code (CVX)" />
+                    <!-- When recording Immunization Medication Information if the lot 
+                         number is not known, use lotNumberText/@nullFlavor="NA". -->
+                    <lotNumberText nullFlavor="NA" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+          ******************************************************** 
+          Vital Signs Section (entries required) (V3)
+          ******************************************************** 
+          -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.1] Vital Signs Section (entries required) (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01" />
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital Signs" />
+          <title>Vital Signs</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Vital Sign</th>
+                  <th>Measurement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Height</td>
+                  <td>180 cm</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>98 kg</td>
+                </tr>
+                <tr>
+                  <td>Temperature</td>
+                  <td>36.4 degrees Celsius</td>
+                </tr>
+                <tr>
+                  <td>Blood Pressure</td>
+                  <td>152/84</td>
+                </tr>
+                <tr>
+                  <td>Heart Rate</td>
+                  <td>60</td>
+                </tr>
+                <tr>
+                  <td>Respiratory Rate</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>O2 Saturation</td>
+                  <td>96%</td>
+                </tr>
+                <tr>
+                  <td>Inhaled oxygen concentration</td>
+                  <td>97%</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <!-- [C-CDA R2] Vital Signs Organizer (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.26" extension="2015-08-01" />
+              <id root="f15d365d-2388-4325-98c2-fdab4ea2e131" />
+              <code code="46680005" displayName="Vital Signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                <translation code="74728-7" displayName="Vital signs, weight, height, head circumference, oximetry, BMI, and BSA panel " codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime value="20200815" />
+              <component>
+                <!-- Vital Sign - Height -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- C-CDA Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="ed9589fd-fda0-41f7-a3d0-dc537554f5c2" />
+                  <code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="180" unit="cm" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Weight -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="f4e729e2-a97f-4a7e-8e23-c92f9b6b55cf" />
+                  <code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Body Weight - Measured" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="98" unit="kg" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Temperature -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="8310-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body Temperature" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="36.4" unit="Cel" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Blood Pressure - Systolic -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="8480-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="BP Systolic" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="152" unit="mm[Hg]" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Blood Pressure - Diastolic -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="8462-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="BP Diastolic" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="84" unit="mm[HG]" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Respiratory rate per minute -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="9279-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Respiratory Rate" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="20" unit="{breaths}/min" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Heart Rate -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="8867-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Heart Rate" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="60" unit="bpm" />
+                </observation>
+              </component>
+              <component>
+                <!-- Vital Sign - Pulse Ox -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="59408-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Heart Rate" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="96" unit="%" />
+                </observation>
+              </component>
+              <component>
+                <!--Vital sign - inhaled oxygen concentration-->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Vital sign observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27" extension="2014-06-09" />
+                  <id root="a0e39c70-9674-4b2a-9837-cdf74200d8d5" />
+                  <code code="3150-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Inhaled oxygen concentration" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20200815" />
+                  <value xsi:type="PQ" value="97" unit="%" />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+          ******************************************************** 
+          Plan of Treatment Section (V2)
+          ******************************************************** 
+          -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.0] Plan of Treatment Section (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09" />
+          <code code="18776-5" displayName="Plan of Treatment" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+          <title>Plan of Treatment</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Ordered Services</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Superficial biopsy of muscle</td>
+                  <td>Active</td>
+                </tr>
+                <tr>
+                  <td>Transthoracic echocardiography for congenital heart disease </td>
+                  <td>Active</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <!-- This entry represents a procedure service that has been ordered, 
+             but not yet provided -->
+          <entry>
+            <procedure classCode="PROC" moodCode="RQO">
+              <!-- [C-CDA R2] Planned Procedure (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.41" extension="2014-06-09" />
+              <id root="93078631-5703-4c18-b4aa-f14042ca6e36" />
+              <code code="112703008" displayName="Superficial biopsy of muscle" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                <translation code="20200" displayName="BIOPSY MUSCLE SUPERFICIAL" codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12" />
+              </code>
+              <statusCode code="active" />
+            </procedure>
+          </entry>
+          <!-- This entry represents an observation service that has been ordered, 
+               but not yet provided -->
+          <entry>
+            <observation classCode="OBS" moodCode="RQO">
+              <!-- [C-CDA R2] Planned Observation (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.44" extension="2014-06-09" />
+              <id root="60b4ec95-1faa-49f4-a59e-02ccdcfb33f1" />
+              <code code="473381003" displayName="Transthoracic echocardiography for congenital heart disease" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                <translation code="93303" displayName="COMPLETE TTHRC ECHO CONGENITAL CARDIAC ANOMALY" codeSystemName="CPT-4" codeSystem="2.16.840.1.113883.6.12" />
+              </code>
+              <statusCode code="active" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <!-- 
+          ******************************************************** 
+          Procedures Section (entries required) (V2)
+          ******************************************************** 
+          -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.0] Procedures Section (entries required) (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
+          <code code="47519-4" displayName="History of procedures" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+          <title>Procedures Section</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Provided Services</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Incision and removal of foreign body, subcutaneous tissues</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>Chest (x-ray) lateral decubitus</td>
+                  <td>Completed</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <!-- This entry represents a procedure service that has been provided -->
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <!-- [C-CDA R2] Procedure Activity Procedure (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.14" extension="2014-06-09" />
+              <id root="305c55e3-ff9d-4402-b34a-97da397cc29e" />
+              <code code="10120" displayName="Incision and removal of foreign body, subcutaneous tissues" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4"></code>
+              <statusCode code="completed" />
+              <effectiveTime value="202008150830" />
+              <performer typeCode="PRF">
+                <!-- Date time of provider contact -->
+                <time>
+                  <low value="202008151030" />
+                </time>
+                <assignedEntity>
+                  <!-- Provider's NPI -->
+                  <id root="2.16.840.1.113883.4.6" extension="3235467442" />
+                  <!-- Provider -->
+                  <code code="207P00000X" displayName="Emergency medicine Physician" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy" />
+                  <assignedPerson>
+                    <name>Shawn O'Malley</name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+            </procedure>
+          </entry>
+          <!-- This entry represents an observation service that has been provided -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- [C-CDA R2] Procedure Activity Observation (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.13" extension="2014-06-09" />
+              <id root="dc507ac6-cb15-4d21-9410-fb399a2b95f6" />
+              <code code="71035" displayName="Chest (x-ray) lateral decubitus" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4"></code>
+              <statusCode code="completed" />
+              <effectiveTime value="202008150830" />
+              <value xsi:type="CD" nullFlavor="NA" />
+              <performer typeCode="PRF">
+                <!-- Date time of provider contact -->
+                <time>
+                  <low value="202008151030" />
+                </time>
+                <assignedEntity>
+                  <!-- Provider's NPI -->
+                  <id root="2.16.840.1.113883.4.6" extension="3235467442" />
+                  <!-- Provider -->
+                  <code code="247100000X" displayName="Radiologic Technologist" codeSystem="2.16.840.1.113883.6.101" codeSystemName="Healthcare Provider Taxonomy" />
+                  <addr use="HP">
+                    <streetAddressLine>75755 Shopko Court</streetAddressLine>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <!-- ZIP Code -->
+                    <postalCode>20078</postalCode>
+                    <country>US</country>
+                  </addr>
+                  <telecom use="MC" value="6665554444" />
+                  <assignedPerson>
+                    <name>Sid Frances, RT</name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!-- 
+            ******************************************************** 
+            Problems Section (entries required) (V3)
+            ******************************************************** 
+        -->
+        <section>
+          <!-- [C-CDA] Problem Section (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST" />
+          <title>Problems</title>
+          <text>
+            <paragraph>Problems</paragraph>
+            <list>
+              <item> Diagnosis <list><item>Medical accidents to patients during surgical and medical care</item></list></item>
+              <item>Condition<list><item>Chronic back pain (finding)</item></list></item>
+              <item>Dependent drug abuse (disorder)</item>
+            </list>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <!-- [C-CDA R2.1] Problem Concern Act (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de8" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <!-- The statusCode represents the need to continue tracking the problem -->
+              <!-- This is of ongoing concern to the provider -->
+              <statusCode code="active" />
+              <effectiveTime>
+                <!-- The low value represents when the problem was first recorded in the patient's chart -->
+                <!-- Concern was documented on July 6, 2013 -->
+                <low value="202008151145-0800" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <!-- This observation represents a diagnosis -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2.1] Problem Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <id root="0d746213-e380-4ced-a835-bda0369e4c8c" />
+                  <code code="282291009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diagnosis" />
+                  <!-- The statusCode reflects the status of the observation itself -->
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <!-- The low value reflects the date of onset -->
+                    <low value="20200815" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="269691005" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" displayName="Medical accidents to patients during surgical and medical care" />
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <!-- [C-CDA R2.1] Problem Concern Act (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de8" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <!-- The statusCode represents the need to continue tracking the problem -->
+              <!-- This is of ongoing concern to the provider -->
+              <statusCode code="active" />
+              <effectiveTime>
+                <!-- The low value represents when the problem was first recorded in the patient's chart -->
+                <!-- Concern was documented on July 6, 2013 -->
+                <low value="201408031145-0800" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <!-- This observation represents a comorbid condition - comorbid 
+                 conditions are now represented in the Problem 
+                 Observation as the Co-Morbid Condition Observation has been retired-->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2.1] Problem Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <id root="b5d36d7f-37ec-48b9-a914-0706dea2a304" />
+                  <code code="75323-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Condition" />
+                  <!-- The statusCode reflects the status of the observation itself -->
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <!-- The low value reflects the date of onset -->
+                    <low value="20140803" />
+                  </effectiveTime>
+                  <value xsi:type="CD" code="134407002" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" displayName="Chronic back pain (finding)" />
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <!-- [C-CDA R2.1] Problem Concern Act (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de8" />
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <!-- The statusCode represents the need to continue tracking the problem -->
+              <!-- This is of ongoing concern to the provider -->
+              <statusCode code="active" />
+              <effectiveTime>
+                <!-- The low value represents when the problem was first recorded in the patient's chart -->
+                <!-- Concern was documented on July 6, 2013 -->
+                <low value="201507011145-0800" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <!-- This observation represents an asthma diagnosis - asthma 
+                 diagnoses are now represented in the Problem 
+                 Observation as the Asthma Diagnsis Observation has been retired -->
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2.1] Problem Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  <id root="ac01c12d-8947-4046-845b-8c8ea220f861" />
+                  <code code="282291009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diagnosis" />
+                  <!-- The statusCode reflects the status of the observation itself -->
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <!-- The low value reflects the date of onset -->
+                    <low value="201500701" />
+                  </effectiveTime>
+                  <!--Dependent drug abuse (disorder)-->
+                  <value xsi:type="CD" code="6525002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Dependent drug abuse (disorder)" />
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <!---
+            ********************************************************
+            Results Section (Entries Optional) (V3)
+            ********************************************************
+        -->
+      <component>
+        <section>
+          <!-- [C-CDA R2.1] Results Section (Entries Optional) (V3) -->
+          <templateId root="2.16.840.1.113883.10.20.22.2.3" extension="2015-08-01" />
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnositc tests and/or laboratory data" />
+          <title>Tests</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th>Result Type</th>
+                  <th>Result Value</th>
+                  <th>Date</th>
+                  <th>Interpretation</th>
+                  <th>Reference Range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Drugs of abuse panel - Blood by Screen method: Opiates [Presence] in Blood by Screen method</td>
+                  <td>8 ng/mL</td>
+                  <td>August 15, 2020</td>
+                  <td>Positive</td>
+                  <td>0 ng/mL</td>
+                </tr>
+                <tr>
+                  <td>Drugs of abuse panel - Blood by Screen method: Oxycodone [Mass/​volume] in Serum, Plasma or Blood by Screen method</td>
+                  <td>&gt; 2 ng/mL</td>
+                  <td>August 15, 2018</td>
+                  <td>Positive</td>
+                  <td>0 ng/mL</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <!-- [C-CDA R2] Result Organizer (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+              <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" />
+              <code code="72479-9" displayName="Drugs of abuse panel - Blood by Screen method" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="202008150830" />
+                <high value="202008150830" />
+              </effectiveTime>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Result Observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <id root="107c2dc0-67a5-11db-bd13-0800200c9a66" />
+                  <code code="51691-4" displayName=" Opiates [Presence] in Blood by Screen method" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="202008150830" />
+                  <value xsi:type="PQ" value="8" unit="ng/mL" />
+                  <interpretationCode code="POS" displayName="Positive" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" />
+                  <author>
+                    <time value="202008150830"/>
+                    <assignedAuthor>
+                      <id root="a69b3d60-2ffd-4440-958b-72b3335ff35a"/>
+                      <assignedPerson>
+                        <name>
+                          <family>Hathway</family>
+                          <given>Waneta</given>
+                        </name>
+                      </assignedPerson>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="PQ" value="0" unit="ng/mL" />
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R2] Result Observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <id root="a69b3d60-2ffd-4440-958b-72b3335ff35f" />
+                  <code code="50021-5" displayName="Oxycodone [Mass/​volume] in Serum, Plasma or Blood by Screen method" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="202008150830" />
+                  <value xsi:type="PQ" value="3" unit="ng/mL" />
+                  <interpretationCode code="POS" displayName="Positive" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" />
+                  <author>
+                    <time value="202008150830"/>
+                    <assignedAuthor>
+                      <id root="a69b3d60-2ffd-4440-958b-72b3335ff35a"/>
+                      <assignedPerson>
+                        <name>
+                          <family>Hathway</family>
+                          <given>Waneta</given>
+                        </name>
+                      </assignedPerson>
+                    </assignedAuthor>
+                  </author>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="PQ" value="0" unit="ng/mL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </observationRange>
+                  </referenceRange>
+                  
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <!---
+            ********************************************************
+            Medical Equipment Section
+            ********************************************************
+        -->
+    </structuredBody>
+  </component>
+</ClinicalDocument>
