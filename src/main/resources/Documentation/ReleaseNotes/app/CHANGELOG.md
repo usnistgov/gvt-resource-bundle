@@ -1,5 +1,14 @@
 # NIST HL7V2 General Validation Tool (GVT) Changelog
 
+### [1.3.1c] - 2025-05-02
+#### Changed 
+* Markdown documents can now be viewed inside the tool (like this change log).
+* Better error and logging management.
+* Docker configuration bumped tomcat to 9.0.104 and to Java 17
+
+#### Fixed
+* Context-based resource bundles coming from TCAMT or manually uploaded did not always perform a file verification check.
+* Context-based resource bundles coming from TCAMT or manually uploaded did not always display verification errors.
 
 ### [1.3.1b] - 2025-04-23
 #### Fixed
