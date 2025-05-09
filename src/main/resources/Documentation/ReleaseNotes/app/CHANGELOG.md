@@ -1,5 +1,12 @@
 # NIST HL7V2 General Validation Tool (GVT) Changelog
 
+### [1.3.1d] - 2025-05-06
+#### Changed
+* Hl7v2 validation engine upgraded to 1.7.1 version.
+
+#### Fixed
+* Fixed validation timing out when multiple calls to external validation services where made.
+
 ### [1.3.1c] - 2025-05-02
 #### Changed 
 * Markdown documents can now be viewed inside the tool (like this change log).
@@ -11,11 +18,6 @@
 * Context-based resource bundles coming from TCAMT or manually uploaded did not always display verification errors.
 
 ### [1.3.1b] - 2025-04-23
-#### Fixed
-* Context based context with test steps pointing to non existing resources should return an error on upload, instead of crashing.
-* Documentation files now load much faster.
-* Uploading context free profiles from IGAMT has been fixed.
-
 #### Added
 * Added a Markdown file (like this one) viewer to the documentation page for .md files.
 * Added Docker file documentation and configuration file to download.
@@ -23,10 +25,14 @@
 #### Changed
 * Hl7v2 validation engine upgraded to final 1.7.0 version.
 
+#### Fixed
+* Context based context with test steps pointing to non existing resources should return an error on upload, instead of crashing.
+* Documentation files now load much faster.
+* Uploading context free profiles from IGAMT has been fixed.
+
 ### [1.3.1a] - 2025-04-18
 #### Fixed
 * Test Plans selection in Context Free and Context Based tab are now saved properly and less flickering occurs when switching from one tab to another.
-
 
 ### [1.3.1] - 2025-04-10
 #### Added

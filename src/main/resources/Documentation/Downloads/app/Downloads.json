@@ -21,6 +21,13 @@
     "position": 3
 },
 {
+	"title": "GVT 1.3.1",
+	"link": "https://hit-2015.nist.gov/wars/gvt-1_3_1.zip",
+	"date": "2025/05/06",
+	"type":"war",
+	"customizable": true
+},
+{
 	"title": "GVT 1.2.0",
 	"link": "https://hit-2015.nist.gov/wars/gvt-1_2_0.zip",
 	"date": "2023/03/03",
