@@ -106,6 +106,20 @@ Once you've completed the configuration, follow these steps to launch the applic
 
 > **Note**: The first launch may take several minutes as Docker downloads the required images.
 
+#### Optional: Custom MySQL Configuration
+
+If you need to pass custom parameters to the MySQL server, you can create a `db_config` directory in your project root and place a `my-custom.cnf` file inside it. Docker Compose will mount this into the MySQL container’s `/etc/mysql/conf.d` so that your settings are applied on startup.
+
+1. Create the `db_config` folder:
+
+2. In db_config/my-custom.cnf, add any MySQL options you need:
+   ```properties
+   [mysqld]
+   # Example custom parameters:
+   max_allowed_packet=64M
+   innodb_buffer_pool_size=1G
+   ```
+   
 ## User Registration
 
 After the application is running, follow these steps to register an administrative user:

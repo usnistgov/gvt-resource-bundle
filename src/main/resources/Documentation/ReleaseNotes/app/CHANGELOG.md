@@ -1,5 +1,51 @@
 # NIST HL7V2 General Validation Tool (GVT) Changelog
 
+
+### [1.3.5] - 2025-09-19
+#### Added
+* Added quick API docummentation for message validation in the validation pages.
+
+### [1.3.4] - 2025-08-22
+#### Changed
+* Hl7v2 validation engine upgraded to 1.7.3 version.
+	* Added IX to the predicate usage
+	* Allow bindingLocation="." for the value set expression (in constraints)
+	* Override predicate target path to use "*" as instance numbers
+	* Removed validation classification "Note". Replaced by Informational
+* Profile viewer updated, now shows slicing options and allows user to select a slicing option to display.
+
+#### Fixed
+* Tool Scope Validation Configuration now works as intended. This feature will be expanded in the future.
+
+### [1.3.3a] - 2025-07-18
+#### Fixed
+* External value set checkbox would sometimes not show even when external value sets were present.
+* Fix the profile verification to detect invalid references of external value sets correctly.
+
+
+### [1.3.3] - 2025-07-09
+#### Added
+* New profile viewer. Cleaner, faster and more complete. Conformance statements now consistently appear in the element they are defined in the profile and constraint files
+
+#### Fixed
+* Tool now loads faster and in a cleaner way.
+
+#### Changed
+* Hl7v2 validation engine upgraded to 1.7.2 version.
+	* Update validation parser and schema to support improved external value sets xml export with grouping
+	* Fix co-constraints validation to remove duplicate co-constraint failure detections when a value set binding coming from a co-constraint fails with multiple detections.	
+
+### [1.3.2a] - 2025-05-30
+#### Added
+* Added the option to skip external value set validation when test step is validated.
+
+#### Fixed
+* Fixed an issue where the profiles coming from IGAMT would not consistently show in the test management tab. 
+
+### [1.3.2] - 2025-05-15
+#### Fixed
+* NHCS CDA: Corrected the test data spreadsheet in downloads and modified the XML test samples to reflect changes from 3.0 to 3.1.
+
 ### [1.3.1d] - 2025-05-06
 #### Changed
 * Hl7v2 validation engine upgraded to 1.7.1 version.
