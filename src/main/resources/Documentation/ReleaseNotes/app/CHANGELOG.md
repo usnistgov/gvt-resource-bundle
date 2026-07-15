@@ -1,5 +1,19 @@
 # NIST HL7V2 General Validation Tool (GVT) Changelog
 
+### [1.3.8] - 2026-05-13
+#### Change
+* APHL plugins don't rely on webservices anymore.
+
+### [1.3.7] - 2026-03-13
+#### Change
+* Minor revision of APHL OBX-4 plugin.
+
+### [1.3.6] - 2025-11-21
+#### Fixed
+* Fixed test management page sometimes not displaying existing test groups and steps.
+
+#### Changed
+* o-usage-complex is not changed in addition to o-usage with the validation configuration is changed. 
 
 ### [1.3.5] - 2025-09-19
 #### Added

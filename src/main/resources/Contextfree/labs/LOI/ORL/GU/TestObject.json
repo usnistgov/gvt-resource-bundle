@@ -1,0 +1,11 @@
+{
+  "name": "GU",
+  "description": "Context Free test step for Application Level Acknowledgement (ORL^O22^ORL_O22), GU profile.",
+  "hl7v2": {
+    "messageId": "ORL_O22:LOI_GU",
+    "valueSetLibraryId": "LOI",
+    "constraintId": "LOI_default"
+  },
+  "position": 1,
+  "id": 3825770081291666000
+}

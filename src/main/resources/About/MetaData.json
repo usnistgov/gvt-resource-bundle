@@ -41,7 +41,20 @@
 			"options":{
 					"REPORT_SAVING_SUPPORTED": false
 			}
- 		}
-			
+ 			},			
+				{
+				"key": "labs",
+				"position": 4,
+				"rsbVersion"	:"",
+	    		"version"		:"",
+	    		"igVersion"		:"",
+	    		"scope": "USER",
+				"name": "Labs Suite",
+							"homeTitle": "Welcome to the NIST Labs Validation Suite",
+				"authorUsername":"YoussefB",
+				"options":{
+						"REPORT_SAVING_SUPPORTED": false
+				}
+			}
 		]
 	}
